@@ -16,3 +16,16 @@
 .vocation-left{
     padding-top: 70px;
 }
+
+footer{
+    font-size: 10px;
+    color: white;
+    background-color: #333333;
+    text-align: center;
+    margin: auto;
+    height: 40px;
+}
+
+.map{
+    width: 100%;
+}
