@@ -1,0 +1,27 @@
+.services{
+    margin-top: 30px;
+    background-color: #f6f6f6;
+}
+.services .row{
+    margin: 30px 0px;
+}
+.services__header_span{
+    padding-bottom: 3px;
+    border-bottom: 2px solid #007df5;
+}
+.services__img_div{
+}
+.services__describe_list__p_span{
+    color: #007df5;
+    margin-right: 20px;
+}
+.services__img_div__img{
+    width: 520px;
+    height: 450px;
+}
+.services__CTA_button{
+        border: none !important;
+}
+.services__CTA_button__img:hover{
+    content:url("img/uslugs_button_hover.png");
+}
