@@ -31,3 +31,102 @@
 .fiches__text {
     margin: 13px 0 0 20px;
 }
+
+.main__functions {
+    padding-top: 20px;
+    background: #f3f3f3;
+}
+
+.main__functions__left-col {
+    height: 170px;
+    padding: 10px;
+    border-left: 1px solid #1383d7;
+}
+
+.main__functions__font_color {
+    color: #1383d7;
+}
+
+.main__functions__text {
+    height: 50px;
+}
+
+.main__functions__text_border {
+    border-bottom: 3px solid #1383d7;
+}
+
+.main__functions__li {
+    font-size: 12px;
+}
+
+.success__numbers {
+    background: url("./img/success_numbers.jpg") center;
+}
+
+.success__numbers__tree-tops {
+    margin-top: 100px;
+}
+
+.success__numbers__one-top {
+    padding: 10px;
+    height: 150px;
+}
+
+.success__numbers__header {
+    text-align: center;
+}
+
+.success__numbers__border {
+    border-top: 2px solid #1383d7;
+    margin-bottom: 10px;
+}
+
+.success__numbers__info {
+
+}
+
+.success__numbers_center {
+    text-align: center;
+}
+
+.success__numbers__text {
+
+}
+
+.success__numbers__one-top__center {
+    padding: 10px;
+    border: 2px solid #1383d7;
+}
+
+.success__numbers__button {
+    margin-top: 20px;
+}
+
+.team {
+    padding: 30px 0;
+    text-align: center;
+    background: #f3f3f3;
+}
+
+.team__header {
+    text-align: center;
+}
+
+.team__header_border {
+    border-bottom: 2px solid #1383d7;
+}
+
+.cards {
+    margin-top: 20px;
+}
+
+.cards__img_circle {
+    width: 80%;
+    height: 80%;
+    border-radius: 100%;
+}
+
+.cards__position {
+    padding-top: 10px;
+    border-top: 2px solid #1383d7;
+}
