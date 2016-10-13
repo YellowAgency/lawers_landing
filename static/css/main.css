@@ -1,16 +1,27 @@
 .header {
     background: url("./img/background1.jpg") center;
-    color: white;
+    color: #bab4aa;
+}
+
+.header__name_left {
+    text-align: left;
+}
+
+.header__name_right {
+    text-align: right;
 }
 
 .header__name_padding {
     padding-left: 10px;
 }
 
-.main__hello {
+.header__hello {
     text-align: center;
     margin: 30px 0;
-    border-bottom: 1px solid blue;
+}
+
+.main__hello_border {
+    border-bottom: 4px solid #1383d7;
 }
 
 .fiches {
