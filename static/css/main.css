@@ -1,3 +1,22 @@
-.main {
-    /*background: url("./img/background1.jpg");*/
+.header {
+    background: url("./img/background1.jpg") center;
+    color: white;
+}
+
+.header__name_padding {
+    padding-left: 10px;
+}
+
+.main__hello {
+    text-align: center;
+    margin: 30px 0;
+    border-bottom: 1px solid blue;
+}
+
+.fiches {
+    margin: 20px 0;
+}
+
+.fiches__text {
+    margin: 13px 0 0 20px;
 }
