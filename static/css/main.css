@@ -31,3 +31,29 @@
 .fiches__text {
     margin: 13px 0 0 20px;
 }
+
+.main__functions {
+    margin-top: 20px;
+}
+
+.main__functions__left-col {
+     height: 170px;
+    padding-left: 10px;
+    border-left: 1px solid #1383d7;
+}
+
+.main__functions__font_color {
+    color: #1383d7;
+}
+
+.main__functions__text {
+    height: 50px;
+}
+
+.main__functions__text_border {
+    border-bottom: 3px solid #1383d7;
+}
+
+.main__functions__li {
+    font-size: 12px;
+}
