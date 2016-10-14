@@ -19,11 +19,8 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '$cknb-ijm!f(7gx7_t4zh^9va=ehk+i2hq&kjp^6n_bvdc)75i'
-
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -128,3 +125,8 @@ STATICFILES_DIRS = [
 ]
 
 APPEND_SLASH = True
+
+try:
+    from lawyer_project.local_settings import *
+except ImportError:
+    pass
