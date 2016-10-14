@@ -1,6 +1,6 @@
 .contacts{
     padding-top: 40px;
-    background: url('img/contacts_bg.png');
+    background: url('../img/contacts_bg.png');
     background-size: 100% 100%;
     min-height: 600px;
     color: white;

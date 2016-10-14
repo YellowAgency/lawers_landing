@@ -1,83 +1,89 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Юристы</title>
-    <link rel="stylesheet" href="../static/css/lib/normalize.css">
-    <link rel="stylesheet" href="../static/css/lib/skeleton.css">
-    <link rel="stylesheet" href="../static/css/lib/font-awesome.min.css">
-    <link rel="stylesheet" href="../static/css/main.css">
-    <link rel="stylesheet" href="../static/css/screen3.css">
-    <link rel="stylesheet" href="../static/css/fourth_screen.css">
-    <link rel="stylesheet" href="../static/css/contacts.css">
+    <title>{% block title %}Юристы{% endblock title %}</title>
+    <link rel="stylesheet" href="{% static 'css/lib/normalize.css' %}">
+    <link rel="stylesheet" href="{% static 'css/lib/skeleton.css' %}">
+    <link rel="stylesheet" href="{% static 'css/lib/font-awesome.min.css' %}">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <link rel="stylesheet" href="{% static 'css/screen3.css' %}">
+    <link rel="stylesheet" href="{% static 'css/fourth_screen.css' %}">
+    <link rel="stylesheet" href="{% static 'css/contacts.css' %}">
 </head>
 <body>
-<header class="header">
-    <div class="row">
-        <div class="six columns">
-            <h3 class="header__name_padding header__name_left ">
-                Название конторы
+{% block header %}
+    <header class="header">
+
+        <div class="row">
+            <div class="six columns">
+                <h3 class="header__name_padding header__name_left ">
+                    Название конторы
+                </h3>
+            </div>
+            <h3 class="six columns header__name_right">
+                8(918)123-45-67
             </h3>
         </div>
-        <h3 class="six columns header__name_right">
-            8(918)123-45-67
-        </h3>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="twelve column">
-                <h3 class="header__hello main__hello_border">
-                    ПОЛУЧИТЕ КАЧЕСТВЕННУЮ ПРАВОВУЮ ПОМОЩЬ
-                </h3>
-                <h4 class="header__hello">
-                    в день обращения
-                </h4>
+        <div class="container">
+            <div class="row">
+                <div class="twelve column">
+                    <h3 class="header__hello main__hello_border">
+                        ПОЛУЧИТЕ КАЧЕСТВЕННУЮ ПРАВОВУЮ ПОМОЩЬ
+                    </h3>
+                    <h4 class="header__hello">
+                        в день обращения
+                    </h4>
+                </div>
             </div>
         </div>
-    </div>
-    <div class="container">
-        <div class="row">
-            <div class="six columns">
-                <div class="row fiches">
-                    <div class="u-pull-left">
-                        <i class="fa fa-shield fa-3x" aria-hidden="true"></i>
+        <div class="container">
+            <div class="row">
+                <div class="six columns">
+                    <div class="row fiches">
+                        <div class="u-pull-left">
+                            <i class="fa fa-shield fa-3x" aria-hidden="true"></i>
+                        </div>
+                        <div class="u-pull-left fiches__text">
+                            Полная конфиденциальность
+                        </div>
                     </div>
-                    <div class="u-pull-left fiches__text">
-                        Полная конфиденциальность
+                    <div class="row fiches">
+                        <div class="u-pull-left">
+                            <i class="fa fa-trophy fa-3x" aria-hidden="true"></i>
+                        </div>
+                        <div class="u-pull-left fiches__text">
+                            Огромный багаж выигранных дел
+                        </div>
+                    </div>
+                    <div class="row fiches">
+                        <div class="u-pull-left">
+                            <i class="fa fa-thumbs-o-up fa-3x" aria-hidden="true"></i>
+                        </div>
+                        <div class="u-pull-left fiches__text">
+                            Гарантия качества услуг
+                        </div>
                     </div>
                 </div>
-                <div class="row fiches">
-                    <div class="u-pull-left">
-                        <i class="fa fa-trophy fa-3x" aria-hidden="true"></i>
-                    </div>
-                    <div class="u-pull-left fiches__text">
-                        Огромный багаж выигранных дел
-                    </div>
+                <div class="six columns">
+                    <form action="/" method="post">
+                        {% csrf_token %}
+                        <div class="row">
+                            <label for="name_input">Имя</label>
+                            <input class="u-full-width" type="text" placeholder="Ваше имя" id="name_input">
+                            <label for="phone_number">Телефон</label>
+                            <input class="u-full-width" type="text" placeholder="Ваш телефон" id="phone_number">
+                            <label for="question_input">Вопрос</label>
+                            <textarea class="u-full-width" name="question" id="question_input" placeholder="Ваш вопрос"></textarea>
+                            <input class="u-full-width button-primary" type="submit" value="получить консультацию">
+                        </div>
+                    </form>
                 </div>
-                <div class="row fiches">
-                    <div class="u-pull-left">
-                        <i class="fa fa-thumbs-o-up fa-3x" aria-hidden="true"></i>
-                    </div>
-                    <div class="u-pull-left fiches__text">
-                        Гарантия качества услуг
-                    </div>
-                </div>
-            </div>
-            <div class="six columns">
-                <form action="#">
-                    <div class="row">
-                        <label for="name_input">Имя</label>
-                        <input class="u-full-width" type="text" placeholder="Ваше имя" id="name_input">
-                        <label for="question_input">Вопрос</label>
-                        <input class="u-full-width" type="text" placeholder="Ваш вопрос" id="question_input">
-
-                        <input class="u-full-width button-primary" type="submit" value="получить консультацию">
-                    </div>
-                </form>
             </div>
         </div>
-    </div>
-</header>
+    </header>
+{% endblock header %}
 <main class="main">
     <div class="main__functions">
         <div class="row">
@@ -139,7 +145,7 @@
         <div class="container vocation">
             <div class="row">
                 <div class="six columns vocation-left">
-                    <img src="../static/css/img/vocation.jpg" class="img-vocation">
+                    <img src="{% static 'img/vocation.jpg' %}" class="img-vocation">
                 </div>
                 <div class="six columns vocation-right">
                     <h3 class="title">
@@ -173,7 +179,7 @@
             </div>
             <div class="row">
                 <div class="seven columns services__img_div">
-                    <img class="services__img_div__img" src="../static/css/img/uslugs_firstphoto.png">
+                    <img class="services__img_div__img" src="{% static 'img/uslugs_firstphoto.png' %}">
                 </div>
                 <div class="five columns">
                     <h4>
@@ -243,7 +249,7 @@
                 </div>
                 <div class="six columns">
                     <div class="six columns services__img_div">
-                        <img class="services__img_div__img" src="../static/css/img/uslugs_ded.png">
+                        <img class="services__img_div__img" src="{% static 'img/uslugs_ded.png' %}">
                     </div>
                 </div>
             </div>
@@ -296,7 +302,7 @@
                             ОСТАЛИСЬ ВОПРОСЫ?
                          </span>
                     </h4>
-                     <span>
+                    <span>
                          ЗАДАЙТЕ ИХ ПРЯМО СЕЙЧАС
                      </span>
 
@@ -304,9 +310,10 @@
                         <div class="row">
                             <label for="name_input">Имя</label>
                             <input class="u-full-width" type="text" placeholder="Ваше имя" id="name_input">
+                            <label for="phone_number">Телефон</label>
+                            <input class="u-full-width" type="text" placeholder="Ваш телефон" id="phone_number">
                             <label for="question_input">Вопрос</label>
-                            <input class="u-full-width" type="text" placeholder="Ваш вопрос" id="question_input">
-
+                            <input class="ui-full-width" type="text" placeholder="Ваш вопрос" id="question_input">
                             <input class="u-full-width button-primary" type="submit" value="получить консультацию">
                         </div>
                     </form>
@@ -384,7 +391,7 @@
                 <div class="container">
                     <div class="three columns">
                         <div>
-                            <img class="cards__img_circle" src="./../static/css/img/face.jpg" alt="">
+                            <img class="cards__img_circle" src="{% static 'img/face.jpg' %}" alt="">
                         </div>
                         <h4 class="cards__name">
                             Первый
@@ -396,7 +403,7 @@
                     </div>
                     <div class="three columns">
                         <div>
-                            <img class="cards__img_circle" src="./../static/css/img/face.jpg" alt="">
+                            <img class="cards__img_circle" src="{% static 'img/face.jpg' %}" alt="">
                         </div>
                         <h4 class="cards__name">
                             Второй
@@ -408,7 +415,7 @@
                     </div>
                     <div class="three columns">
                         <div>
-                            <img class="cards__img_circle" src="./../static/css/img/face.jpg" alt="">
+                            <img class="cards__img_circle" src="{% static 'img/face.jpg' %}" alt="">
                         </div>
                         <h4 class="cards__name">
                             Третий
@@ -420,7 +427,7 @@
                     </div>
                     <div class="three columns">
                         <div>
-                            <img class="cards__img_circle" src="./../static/css/img/face.jpg" alt="">
+                            <img class="cards__img_circle" src="{% static 'img/face.jpg' %}" alt="">
                         </div>
                         <h4 class="cards__name">
                             Четвертый

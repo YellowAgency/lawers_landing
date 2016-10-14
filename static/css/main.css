@@ -1,5 +1,5 @@
 .header {
-    background: url("./img/background1.jpg") center;
+    background: url("../img/background1.jpg") center;
     color: #bab4aa;
 }
 
@@ -60,7 +60,7 @@
 }
 
 .success__numbers {
-    background: url("./img/success_numbers.jpg") center;
+    background: url("../img/success_numbers.jpg") center;
 }
 
 .success__numbers__tree-tops {
