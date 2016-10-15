@@ -67,7 +67,7 @@
                     </div>
                 </div>
                 <div class="six columns">
-                    <form action="/" method="post">
+                    <form action="{% url 'index' %}" method="post">
                         {% csrf_token %}
                         <div class="row">
                             <label for="name_input">Имя</label>
