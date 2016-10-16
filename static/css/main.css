@@ -38,17 +38,12 @@
 }
 
 .main__functions__left-col {
-    height: 170px;
     padding: 10px;
-    border-left: 1px solid #1383d7;
 }
 
-.main__functions__font_color {
+.main__functions__font_color_center {
+    text-align: center;
     color: #1383d7;
-}
-
-.main__functions__text {
-    height: 50px;
 }
 
 .main__functions__text_border {
@@ -56,6 +51,8 @@
 }
 
 .main__functions__li {
+    border-top: 3px solid #1383d7;
+    padding-top: 10px;
     font-size: 12px;
 }
 
