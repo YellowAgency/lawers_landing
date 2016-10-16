@@ -3,16 +3,16 @@
     color: #bab4aa;
 }
 
-.header__name_left {
-    text-align: left;
-}
-
-.header__name_right {
-    text-align: right;
+.header_center {
+    text-align: center;
 }
 
 .header__name_padding {
     padding-left: 10px;
+}
+
+.header__number_margin {
+    margin-bottom: 0;
 }
 
 .header__hello {

@@ -17,7 +17,11 @@
     padding-top: 70px;
 }
 
-footer{
+.vocation_padding {
+    padding-top: 10px;
+}
+
+.footer{
     font-size: 10px;
     color: white;
     background-color: #333333;

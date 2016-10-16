@@ -16,18 +16,22 @@
 <body>
 {% block header %}
     <header class="header">
-
-        <div class="row">
-            <div class="six columns">
-                <h3 class="header__name_padding header__name_left ">
-                    Название конторы
-                </h3>
-            </div>
-            <h3 class="six columns header__name_right">
-                8(918)123-45-67
-            </h3>
-        </div>
         <div class="container">
+            <div class="row header_center">
+                <div class="six columns">
+                    <h4 class="header__name_padding">
+                        Юридическая компания
+                    </h4>
+                </div>
+                <div class="six columns">
+                    <h4 class="header__number_margin">
+                        8(918)123-45-67
+                    </h4>
+                    <button class="button-primary">
+                        Получить консультацию
+                    </button>
+                </div>
+            </div>
             <div class="row">
                 <div class="twelve column">
                     <h3 class="header__hello main__hello_border">
@@ -76,7 +80,8 @@
                             <label for="phone_number">Телефон</label>
                             <input class="u-full-width" type="text" placeholder="Ваш телефон" id="phone_number">
                             <label for="question_input">Вопрос</label>
-                            <textarea class="u-full-width" name="question" id="question_input" placeholder="Ваш вопрос"></textarea>
+                            <textarea class="u-full-width" name="question" id="question_input"
+                                      placeholder="Ваш вопрос"></textarea>
                             <input class="u-full-width button-primary" type="submit" value="получить консультацию">
                         </div>
                     </form>
@@ -153,18 +158,20 @@
                         ПРИЗВАНИЕ
                     </h3>
 
-                    <p>Защита прав наших доверителей, индивидуальный подход к каждой проблеме на основе имеющегося
+                    <p>
+                        Защита прав наших доверителей, индивидуальный подход к каждой проблеме на основе имеющегося
                         профессионального опыта. Мы помогаем решить самые разные правовые проблемы: от бытовых до
                         экономических. Мы ведем гражданские дела, оказываем юридическую помощь как физическим, так и
-                        юридическим лицам. Наши цены понятны, а офис находится в центре Москвы.</p>
-
-                    <p>Мы поддерживаем клиентов по российским и международным проектам любой сложности, включая
+                        юридическим лицам. Наши цены понятны, а офис находится в центре Москвы.
+                    </p>
+                    <p>
+                        Мы поддерживаем клиентов по российским и международным проектам любой сложности, включая
                         структурирование отношений, разработку коммерческих договоров и политик, а также
-                        консультирование клиентов по иностранным юрисдикциям.</p>
-
-                    <p>Мы часто выступаем в роли руководителя проектов наших доверителей: мы не только предоставляем
-                        юридические консультации, но и помогаем нашим клиентам осуществлять общую координацию
-                        проектов.</p>
+                        консультирование клиентов по иностранным юрисдикциям.
+                    </p>
+                    <button class="button-primary u-full-width">
+                        Узнать больше
+                    </button>
                 </div>
             </div>
         </div>
@@ -201,15 +208,6 @@
                         <span class="services__describe_list__p_span">●</span>Содействие в получении страхового
                         возмещения при банкротстве страховой организации
                     </p>
-
-                    <p>
-                        <span class="services__describe_list__p_span">●</span>Обжалование занижения выплаченного
-                        страхового возмещения
-                    </p>
-
-                    <p>
-                        <span class="services__describe_list__p_span">●</span>Обжалование постановлений ГИБДД.
-                    </p>
                     <button class="button-primary u-full-width">
                         Получить консультацию
                     </button>
@@ -235,21 +233,12 @@
                         <span class="services__describe_list__p_span">●</span>Содействие в получении страхового
                         возмещения при банкротстве страховой организации
                     </p>
-
-                    <p>
-                        <span class="services__describe_list__p_span">●</span>Обжалование занижения выплаченного
-                        страхового возмещения
-                    </p>
-
-                    <p>
-                        <span class="services__describe_list__p_span">●</span>Обжалование постановлений ГИБДД.
-                    </p>
                     <button class="button-primary u-full-width">
                         Получить консультацию
                     </button>
                 </div>
                 <div class="six columns">
-                    <div class="six columns services__img_div">
+                    <div class="services__img_div">
                         <img class="services__img_div__img" src="{% static 'img/uslugs_ded.png' %}">
                     </div>
                 </div>
@@ -448,7 +437,7 @@
                 width="100%" height="450" frameborder="0" allowfullscreen></iframe>
     </div>
 </main>
-<footer>
+<footer class="footer">
     © ВСЕ ПРАВА ЗАЩИЩЕНЫ 2016 ГОД - Название организации
     <br>
     Политика конфиденциальности
