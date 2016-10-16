@@ -20,12 +20,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/1.10/howto/deployment/checklist/
 
-SECRET_KEY = os.environ.get('SECRET_KEY', '')
+# SECURITY WARNING: keep the secret key used in production secret!
+SECRET_KEY = '$cknb-ijm!f(7gx7_t4zh^9va=ehk+i2hq&kjp^6n_bvdc)75i'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DJ_DEBUG', False)
+DEBUG = True
 
-ALLOWED_HOSTS = os.environ.get('DJ_ALLOWED_HOSTS', ['example.com'])
+ALLOWED_HOSTS = []
+
 
 # Application definition
 
@@ -75,7 +77,10 @@ WSGI_APPLICATION = 'lawyer_project.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
 DATABASES = {
-    'default': dj_database_url.config()
+    'default': {
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+    }
 }
 
 # Password validation
