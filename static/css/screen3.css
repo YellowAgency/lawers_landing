@@ -26,7 +26,8 @@
     color: white;
     background-color: #333333;
     text-align: center;
-    margin: auto;
+    padding-top: 6px;
+    padding-bottom: 6px;
     height: 40px;
 }
 

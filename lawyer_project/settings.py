@@ -22,8 +22,17 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
+def env_var(key, default=None):
+    """Retrieves env vars and makes Python boolean replacements"""
+    val = os.environ.get(key, default)
+    if val == 'True':
+        val = True
+    elif val == 'False':
+        val = False
+    return val
+
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DJ_DEBUG', False)
+DEBUG = env_var('DJ_DEBUG', False)
 
 ALLOWED_HOSTS = os.environ.get('DJ_ALLOWED_HOSTS', ['example.com'])
 
@@ -131,3 +140,5 @@ try:
     from lawyer_project.local_settings import *
 except ImportError:
     pass
+
+

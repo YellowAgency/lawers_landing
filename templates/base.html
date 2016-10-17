@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,12 +20,12 @@
             <div class="row header_center">
                 <div class="six columns">
                     <h4 class="header__name_padding">
-                        Юридическая компания
+                        <font color="#1383d7">GSN</font>-LAWGROUP
                     </h4>
                 </div>
                 <div class="six columns">
                     <h4 class="header__number_margin">
-                        8(918)123-45-67
+                        8 (926) 422 47 09
                     </h4>
                     <button class="button-primary">
                         Получить консультацию
@@ -47,31 +47,37 @@
             <div class="row">
                 <div class="six columns">
                     <div class="row fiches">
-                        <div class="u-pull-left">
+                        <div class="u-pull-left fiches__icon">
                             <i class="fa fa-shield fa-3x" aria-hidden="true"></i>
                         </div>
                         <div class="u-pull-left fiches__text">
-                            Полная конфиденциальность
+                            Правовые консультации и
+                            <br>
+                            оформление документов ДДУ
                         </div>
                     </div>
                     <div class="row fiches">
-                        <div class="u-pull-left">
+                        <div class="u-pull-left fiches__icon">
                             <i class="fa fa-trophy fa-3x" aria-hidden="true"></i>
                         </div>
                         <div class="u-pull-left fiches__text">
-                            Огромный багаж выигранных дел
+                            Взыскание с засройщика
+                            <br>
+                            всех видов неустоек в суде
                         </div>
                     </div>
                     <div class="row fiches">
-                        <div class="u-pull-left">
+                        <div class="u-pull-left fiches__icon">
                             <i class="fa fa-thumbs-o-up fa-3x" aria-hidden="true"></i>
                         </div>
                         <div class="u-pull-left fiches__text">
-                            Гарантия качества услуг
+                            Признание прав собственности
+                            <br>
+                            и полная юридическая защита
                         </div>
                     </div>
                 </div>
-                <div class="six columns">
+                <div class="six columns askform">
                     <form action="{% url 'index' %}" method="post">
                         {% csrf_token %}
                         <div class="row">
@@ -86,6 +92,13 @@
                         </div>
                     </form>
                 </div>
+                    <div class="row">
+                        <div class="six columns and">
+                            <h5>
+                                А так же:
+                            </h5>
+                        </div>
+                    </div>
             </div>
         </div>
     </header>
@@ -98,7 +111,7 @@
                     <div class="main__functions__font_color_center">
                         <i class="fa fa-briefcase fa-4x" aria-hidden="true"></i>
                     </div>
-                    <p>
+                    <p class="and-functions">
                         Правовое сопровождение сделок
                     </p>
                     <ul class="main__functions__li">
@@ -116,7 +129,7 @@
                         <i class="fa fa-gavel fa-4x" aria-hidden="true"></i>
                     </div>
                     <div>
-                        <p>
+                        <p class="and-functions">
                             Судебно-претензионная деятельность
                         </p>
                         <ul class="main__functions__li">
@@ -134,7 +147,7 @@
                     <div class="main__functions__font_color_center">
                         <i class="fa fa-commenting fa-4x" aria-hidden="true"></i>
                     </div>
-                    <p>
+                    <p class="and-functions">
                         Консультации
                     </p>
                     <ul class="main__functions__li">
@@ -186,10 +199,10 @@
                 </h4>
             </div>
             <div class="row">
-                <div class="seven columns services__img_div">
-                    <img class="services__img_div__img" src="{% static 'img/uslugs_firstphoto.png' %}">
+                <div class="six columns services__img_div">
+                    <img class="services__img_div__img" src="{% static 'img/uslugs_firstphoto.jpg' %}">
                 </div>
-                <div class="five columns">
+                <div class="six columns">
                     <h4>
                         АВТОЮРИСТ
                     </h4>
@@ -214,32 +227,38 @@
                 </div>
             </div>
             <div class="row">
-                <div class="six columns">
+                <div class="six columns nasledstvo_left">
                     <h4>
-                        АВТОЮРИСТ
+                        НАСЛЕДСТВЕННОЕ ПРАВО
                     </h4>
 
                     <p>
-                        <span class="services__describe_list__p_span">●</span> Споры со страховой компанией
-                        (в т.ч. в суде).
+                        <span class="services__describe_list__p_span">●</span> Признание права собственности на
+                        наследство в т.ч. на имущество за рубежом
                     </p>
 
                     <p>
-                        <span class="services__describe_list__p_span">●</span>Избежание затягивания сроков согласования
-                        ремонта автомобиля на сервисной станции (КАСКО)
+                        <span class="services__describe_list__p_span">●</span>Сопровождение процесса признания
+                        законности завещания или процесса о признании завещания недействительным
                     </p>
 
                     <p>
-                        <span class="services__describe_list__p_span">●</span>Содействие в получении страхового
-                        возмещения при банкротстве страховой организации
+                        <span class="services__describe_list__p_span">●</span>Сопровождении дела о лишении наследования
                     </p>
+                    <p>
+                        <span class="services__describe_list__p_span">●</span>Восстановление сроков наследства
+                    </p>
+                    <p>
+                        <span class="services__describe_list__p_span">●</span>Сопровождение процесса наследования
+                    </p>
+
                     <button class="button-primary u-full-width">
                         Получить консультацию
                     </button>
                 </div>
-                <div class="six columns">
+                <div class="six columns nasledstvo_right">
                     <div class="services__img_div">
-                        <img class="services__img_div__img" src="{% static 'img/uslugs_ded.png' %}">
+                        <img class="services__img_div__img" src="{% static 'img/uslugs_ded.jpg'%}">
                     </div>
                 </div>
             </div>
@@ -286,7 +305,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="six columns">
+                <div class="six columns contacts-left">
                     <h4>
                          <span class="contacts__contacts__header_span">
                             ОСТАЛИСЬ ВОПРОСЫ?
@@ -318,7 +337,7 @@
             <div class="container">
                 <div class="success__numbers__header">
                     <h3>
-                        Компания в цифрах
+                        GSN-LAWGROUP В ЦИФРАХ
                     </h3>
 
                     <div class="offset-by-four four columns success__numbers__border"></div>
@@ -431,14 +450,15 @@
             </div>
         </div>
     </div>
-
-    <div class="map">
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4488.936290773584!2d37.680958358172276!3d55.76774077395552!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b5357dfa0c386f%3A0xe5759ae5dc745a95!2z0JHQsNGD0LzQsNC90YHQutCw0Y8!5e0!3m2!1sru!2sru!4v1476362154855"
-                width="100%" height="450" frameborder="0" allowfullscreen></iframe>
+    <div class="container">
+        <div class="map">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2243.6054540613!2d37.66228021581532!3d55.78272398056139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b5358691250ee1%3A0x5410576d3047f98a!2z0JLQtdGA0YXQvdGP0Y8g0JrRgNCw0YHQvdC-0YHQtdC70YzRgdC60LDRjyDRg9C7LiwgMTfQkCwg0JzQvtGB0LrQstCwLCAxMDcxNDA!5e0!3m2!1sru!2sru!4v1476714417010" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen>
+            </iframe>
+        </div>
     </div>
 </main>
 <footer class="footer">
-    © ВСЕ ПРАВА ЗАЩИЩЕНЫ 2016 ГОД - Название организации
+    © ВСЕ ПРАВА ЗАЩИЩЕНЫ 2016 ГОД - GSN-LAWGROUP
     <br>
     Политика конфиденциальности
 </footer>

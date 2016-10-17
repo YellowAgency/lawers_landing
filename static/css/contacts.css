@@ -1,6 +1,6 @@
 .contacts{
     padding-top: 40px;
-    background: url('../img/contacts_bg.png');
+    background: url('../img/contacts_bg_left.jpg');
     background-size: cover;
     color: white;
 }
@@ -10,6 +10,7 @@
 }
 .contacts__contacts {
     font-size: 18px;
+
 }
 .contacts__contacts__row{
     margin-top: 80px;
@@ -17,4 +18,8 @@
 .contacts__contacts i{
     margin-right: 20px;
     font-size: 30px;
+}
+
+.contacts-left{
+
 }
