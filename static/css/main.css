@@ -8,8 +8,18 @@
 }
 
 .header__name_padding {
-    padding-left: 10px;
+    padding-left: 0px;
+    display:inline;
+    font-size: 28px;
 }
+
+.header__name_padding_colored {
+    padding-left: 0px;
+    color: #1383d7;
+    display:inline;
+    font-size: 28px;
+}
+
 
 .header__number_margin {
     margin-bottom: 0;
@@ -25,7 +35,7 @@
 }
 
 .fiches {
-    margin: 13% 0;
+    margin: 50px 0;
 
 }
 
@@ -131,7 +141,7 @@
 
 .askform{
     background-color: rgba(0,0,0,0.5);
-    padding: 3%;
+    padding: 20px;
     margin-bottom: 40px;
 }
 
@@ -139,11 +149,15 @@
     background-color: #f3f3f3;
 }
 
-.and-functions{
+.andfunctions{
     text-align: center;
 }
 
 .fiches__icon{
     margin-top: 13px;
+}
+
+.fiches__margin{
+    margin-bottom: 0;
 }
 

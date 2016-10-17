@@ -1,6 +1,6 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="en" xmlns="http://www.w3.org/1999/html">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -19,9 +19,12 @@
         <div class="container">
             <div class="row header_center">
                 <div class="six columns">
-                    <h4 class="header__name_padding">
-                        <font color="#1383d7">GSN</font>-LAWGROUP
-                    </h4>
+                    <div class="header__name_padding_colored">
+                        GSN
+                    </div>
+                    <div class="header__name_padding">
+                        - LAWGROUP
+                    </div>
                 </div>
                 <div class="six columns">
                     <h4 class="header__number_margin">
@@ -51,9 +54,13 @@
                             <i class="fa fa-shield fa-3x" aria-hidden="true"></i>
                         </div>
                         <div class="u-pull-left fiches__text">
-                            Правовые консультации и
-                            <br>
-                            оформление документов ДДУ
+                            <p class="fiches__margin">
+                                Правовые консультации и
+                            </p>
+                            <p class="fiches__margin">
+                                оформление документов ДДУ
+                            </p>
+
                         </div>
                     </div>
                     <div class="row fiches">
@@ -61,9 +68,12 @@
                             <i class="fa fa-trophy fa-3x" aria-hidden="true"></i>
                         </div>
                         <div class="u-pull-left fiches__text">
-                            Взыскание с засройщика
-                            <br>
-                            всех видов неустоек в суде
+                            <p class="fiches__margin">
+                                Взыскание с засройщика
+                            </p>
+                            <p class="fiches__margin">
+                                всех видов неустоек в суде
+                            </p>
                         </div>
                     </div>
                     <div class="row fiches">
@@ -71,9 +81,12 @@
                             <i class="fa fa-thumbs-o-up fa-3x" aria-hidden="true"></i>
                         </div>
                         <div class="u-pull-left fiches__text">
-                            Признание прав собственности
-                            <br>
-                            и полная юридическая защита
+                            <p class="fiches__margin">
+                                Признание прав собственности
+                            </p>
+                            <p class="fiches__margin">
+                                и полная юридическая защита
+                            </p>
                         </div>
                     </div>
                 </div>
@@ -111,7 +124,7 @@
                     <div class="main__functions__font_color_center">
                         <i class="fa fa-briefcase fa-4x" aria-hidden="true"></i>
                     </div>
-                    <p class="and-functions">
+                    <p class="andfunctions">
                         Правовое сопровождение сделок
                     </p>
                     <ul class="main__functions__li">
@@ -129,7 +142,7 @@
                         <i class="fa fa-gavel fa-4x" aria-hidden="true"></i>
                     </div>
                     <div>
-                        <p class="and-functions">
+                        <p class="andfunctions">
                             Судебно-претензионная деятельность
                         </p>
                         <ul class="main__functions__li">
@@ -147,7 +160,7 @@
                     <div class="main__functions__font_color_center">
                         <i class="fa fa-commenting fa-4x" aria-hidden="true"></i>
                     </div>
-                    <p class="and-functions">
+                    <p class="andfunctions">
                         Консультации
                     </p>
                     <ul class="main__functions__li">
@@ -227,7 +240,7 @@
                 </div>
             </div>
             <div class="row">
-                <div class="six columns nasledstvo_left">
+                <div class="six columns inheritance_left">
                     <h4>
                         НАСЛЕДСТВЕННОЕ ПРАВО
                     </h4>
@@ -256,7 +269,7 @@
                         Получить консультацию
                     </button>
                 </div>
-                <div class="six columns nasledstvo_right">
+                <div class="six columns inheritance_right">
                     <div class="services__img_div">
                         <img class="services__img_div__img" src="{% static 'img/uslugs_ded.jpg'%}">
                     </div>
@@ -305,7 +318,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="six columns contacts-left">
+                <div class="six columns">
                     <h4>
                          <span class="contacts__contacts__header_span">
                             ОСТАЛИСЬ ВОПРОСЫ?
