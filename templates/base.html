@@ -407,7 +407,7 @@
         <a title="Close" class="close" onclick="closeConsultation(this)">X</a>
         <h6 class="modalDialog_center">ОСТАВЬТЕ КОНТАКТНЫЕ ДАННЫЕ ДЛЯ СВЯЗИ</h6>
 
-        <form action="{% url 'index' %}" method="post">
+        <form action="{% url 'landing:index' %}" method="post">
             {% csrf_token %}
             <div class="row">
                 <label class="modalDialog_align" for="name_input">Имя</label>
