@@ -1,4 +1,5 @@
 {% load static %}
+{% load widget_tweaks %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -91,11 +92,12 @@
                     </div>
                 </div>
                 <div class="six columns askform">
-                    <form action="{% url 'index' %}" method="post">
+                    <form action="{% url 'landing:index' %}" method="post">
                         {% csrf_token %}
                         <div class="row">
                             <label for="name_input">Имя</label>
-                            <input class="u-full-width" type="text" placeholder="Ваше имя" id="name_input">
+                            {{ form.client_name | attr:"placeholder:Ваше имя" | add_class:"u-full-width"}}
+{#                            <input class="u-full-width" type="text" placeholder="Ваше имя" id="name_input">#}
                             <label for="phone_number">Телефон</label>
                             <input class="u-full-width" type="text" placeholder="Ваш телефон" id="phone_number">
                             <label for="question_input">Вопрос</label>
