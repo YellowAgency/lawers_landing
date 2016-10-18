@@ -1,4 +1,5 @@
 {% load static %}
+{% load widget_tweaks %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -98,17 +99,16 @@
                     </div>
                 </div>
                 <div class="six columns askform">
-                    <form action="{% url 'index' %}" method="post">
+                    <form action="{% url 'landing:process' %}" method="post" class = "js__request_form">
                         {% csrf_token %}
                         <div class="row">
                             <div class="askform__text"><h6>ОСТАВЬТЕ ЗАЯВКУ НА ЮРИДИЧЕСКУЮ КОНСУЛЬТАЦИЮ</h6></div>
                             <label for="name_input">Имя</label>
-                            <input class="u-full-width askform__input" type="text" placeholder="Ваше имя" id="name_input">
+                            {{ form.client_name | attr:"placeholder:Ваше имя" | add_class:"u-full-width"}}
                             <label for="phone_number">Телефон</label>
-                            <input class="u-full-width askform__input" type="text" placeholder="Ваш телефон" id="phone_number">
+                            {{ form.phone_number | attr:"placeholder:Ваш телефон" | add_class:"u-full-width phone-validator"}}
                             <label for="question_input">Вопрос</label>
-                            <textarea class="u-full-width askform__input textarea_resize" name="question" id="question_input"
-                                      placeholder="Ваш вопрос"></textarea>
+                            {{ form.claim_text | attr:"placeholder:Ваш вопрос" | add_class:"u-full-width askform__input_black textarea_resize" }}
                             <input class="u-full-width button-primary" type="submit" value="получить консультацию">
                         </div>
                     </form>
@@ -424,6 +424,10 @@
         </form>
     </div>
 </div>
-<script src="{% static 'js/main.js' %}"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="{% static 'django_ajax/js/jquery.ajax.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/mask.js' %}"></script>
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.1/jquery.validate.min.js"></script>
+<script src = "{% static 'js/main.js' %}"></script>
 </body>
 </html>

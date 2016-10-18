@@ -1,13 +1,23 @@
-from django.shortcuts import render, render_to_response
+from django.shortcuts import render_to_response
 
 
-# Create your views here.
-from django.template import RequestContext
+from django.views.generic import CreateView, TemplateView
+from django_ajax.mixin import AJAXMixin
 
 from landing.forms import ClaimForm
 
 
-def index(request):
-    if request.method == 'POST':
-        form = ClaimForm()
-    return render_to_response('index.html', context=RequestContext(request))
+class Index(TemplateView):
+    template_name = 'base.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(Index, self).get_context_data(**kwargs)
+        context['form'] = ClaimForm()
+        return context
+
+
+class ProcessForm(AJAXMixin, CreateView):
+    form_class = ClaimForm
+
+    def form_invalid(self, form):
+        return form.errors.as_json(escape_html=True)
