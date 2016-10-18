@@ -11,7 +11,7 @@ $(document).ready(function(){
         });
         return false;
     });
-    $(".phone-validator").mask("(999)999-99-99");
+    $(".phone-validator").mask("9(999)999-99-99");
 
     $(".phone-validator").on("blur", function() {
         var last = $(this).val().substr( $(this).val().indexOf("-") + 1 );
