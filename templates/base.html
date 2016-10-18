@@ -6,9 +6,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}Юристы{% endblock title %}</title>
-    <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
-    <script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.1/jquery.validate.min.js"></script>
-    <script src = "{% static 'js/main.js' %}"></script>
     <link rel="stylesheet" href="{% static 'css/lib/normalize.css' %}">
     <link rel="stylesheet" href="{% static 'css/lib/skeleton.css' %}">
     <link rel="stylesheet" href="{% static 'css/lib/font-awesome.min.css' %}">
@@ -95,17 +92,16 @@
                     </div>
                 </div>
                 <div class="six columns askform">
-                    <form action="{% url 'landing:index' %}" method="post" class = "js__request_form">
+                    <form action="{% url 'landing:process' %}" method="post" class = "js__request_form">
                         {% csrf_token %}
                         <div class="row">
                             <label for="name_input">Имя</label>
                             {{ form.client_name | attr:"placeholder:Ваше имя" | add_class:"u-full-width"}}
 {#                            <input class="u-full-width" type="text" placeholder="Ваше имя" id="name_input">#}
                             <label for="phone_number">Телефон</label>
-                            <input class="u-full-width" type="text" name = "phone_number" placeholder="Ваш телефон" id="phone_number">
+                            {{ form.phone_number | attr:"placeholder:Ваш телефон" | add_class:"u-full-width phone-validator"}}
                             <label for="question_input">Вопрос</label>
-                            <textarea class="u-full-width askform__input_black textarea_resize" name="question" id="question_input"
-                                      placeholder="Ваш вопрос"></textarea>
+                            {{ form.claim_text | attr:"placeholder:Ваш вопрос" | add_class:"u-full-width askform__input_black textarea_resize" }}
                             <input class="u-full-width button-primary" type="submit" value="получить консультацию">
                         </div>
                     </form>
@@ -480,5 +476,11 @@
     <br>
     Политика конфиденциальности
 </footer>
+
+<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script type="text/javascript" src="{% static 'django_ajax/js/jquery.ajax.min.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/mask.js' %}"></script>
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.1/jquery.validate.min.js"></script>
+<script src = "{% static 'js/main.js' %}"></script>
 </body>
 </html>

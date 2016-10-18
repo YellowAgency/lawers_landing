@@ -4,52 +4,25 @@
 $(document).ready(function(){
     $('.js__request_form').submit(function(e){
         e.preventDefault();
-        $(this).validate({
-            rules:{
+        var url = $(this).attr('action');
+        console.log(url);
+        ajaxPost(url, $(this).serializeArray(), function(e){
+            console.log(e);
+        });
+        return false;
+    });
+    $(".phone-validator").mask("(999)999-99-99");
 
-                name:{
-                    required: true,
-                    minlength: 4,
-                    maxlength: 16
-                },
+    $(".phone-validator").on("blur", function() {
+        var last = $(this).val().substr( $(this).val().indexOf("-") + 1 );
 
-                phone_number:{
-                    required: true,
-                    minlength: 6,
-                    maxlength: 16
-                },
+        if( last.length == 3 ) {
+            var move = $(this).val().substr( $(this).val().indexOf("-") - 1, 1 );
+            var lastfour = move + last;
+            var first = $(this).val().substr( 0, 9 );
 
-                question:{
-                    required: true,
-                    minlength: 4,
-                    maxlength: 16
-                }
-
-            },
-
-            messages:{
-
-                name:{
-                    required: "Это поле обязательно для заполнения",
-                    minlength: "Логин должен быть минимум 4 символа",
-                    maxlength: "Максимальное число символо - 16"
-                },
-
-                phone_number:{
-                    required: "Это поле обязательно для заполнения",
-                    minlength: "Пароль должен быть минимум 6 символа",
-                    maxlength: "Пароль должен быть максимум 16 символов"
-                },
-
-                question:{
-                    required: "Это поле обязательно для заполнения",
-                    minlength: "Пароль должен быть минимум 6 символа",
-                    maxlength: "Пароль должен быть максимум 16 символов"
-                }
-
-            }
-
-         });
+            $(this).val( first + '-' + lastfour );
+        }
     });
     //var jsonForAjax = $(this).serialize();
     //$.post( "", jsonForAjax);
