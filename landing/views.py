@@ -1,6 +1,3 @@
-from django.shortcuts import render_to_response
-
-
 from django.views.generic import CreateView, TemplateView
 from django_ajax.mixin import AJAXMixin
 
