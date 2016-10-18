@@ -3,6 +3,7 @@
     background: url('../img/contacts_bg_left.jpg');
     background-size: cover;
     color: white;
+    margin-top: 30px;
 }
 .contacts__contacts__header_span{
     padding-bottom: 5px;

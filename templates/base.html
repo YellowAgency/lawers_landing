@@ -26,24 +26,31 @@
                     <div class="header__name_padding">
                         - LAWGROUP
                     </div>
+                    <div class="header__name_padding_company">Юридическая компания</div>
                 </div>
                 <div class="six columns">
-                    <h4 class="header__number_margin">
+                    <h6 class="header__number_margin">
                         8 (926) 422 47 09
-                    </h4>
-                    <button class="button-primary">
-                        Получить консультацию
+                    </h6>
+                    <button class="button-primary consultation" onclick="getConsultation(this)">
+                        <a class="button-primary consultation__a_decoration" href="#openModal">Получить консультацию</a>
                     </button>
                 </div>
             </div>
             <div class="row">
                 <div class="twelve column">
-                    <h3 class="header__hello main__hello_border">
-                        ПОЛУЧИТЕ КАЧЕСТВЕННУЮ ПРАВОВУЮ ПОМОЩЬ
-                    </h3>
                     <h4 class="header__hello">
-                        в день обращения
+                        Договоры Долевого Участия (ДДУ) -
                     </h4>
+                    <h4 class="header__hello main__hello_border">
+                        Качественная правовая помощь
+                    </h4>
+                    <div class="six columns offset-by-three border">
+
+                    </div>
+                    <h5 class="header__hello header__hello_margin">
+                        в день обращения
+                    </h5>
                 </div>
             </div>
         </div>
@@ -70,7 +77,7 @@
                         </div>
                         <div class="u-pull-left fiches__text">
                             <p class="fiches__margin">
-                                Взыскание с засройщика
+                                Взыскание с застройщика
                             </p>
                             <p class="fiches__margin">
                                 всех видов неустоек в суде
@@ -95,9 +102,9 @@
                     <form action="{% url 'landing:process' %}" method="post" class = "js__request_form">
                         {% csrf_token %}
                         <div class="row">
+                            <div class="askform__text"><h6>ОСТАВЬТЕ ЗАЯВКУ НА ЮРИДИЧЕСКУЮ КОНСУЛЬТАЦИЮ</h6></div>
                             <label for="name_input">Имя</label>
                             {{ form.client_name | attr:"placeholder:Ваше имя" | add_class:"u-full-width"}}
-{#                            <input class="u-full-width" type="text" placeholder="Ваше имя" id="name_input">#}
                             <label for="phone_number">Телефон</label>
                             {{ form.phone_number | attr:"placeholder:Ваш телефон" | add_class:"u-full-width phone-validator"}}
                             <label for="question_input">Вопрос</label>
@@ -107,7 +114,7 @@
                     </form>
                 </div>
                     <div class="row">
-                        <div class="six columns and">
+                        <div class="six columns offset-by-one and">
                             <h5>
                                 А так же:
                             </h5>
@@ -174,41 +181,12 @@
             </div>
         </div>
     </div>
-    <div class="vocation-background">
-        <div class="container vocation">
-            <div class="row">
-                <div class="six columns vocation-left">
-                    <img src="{% static 'img/vocation.jpg' %}" class="img-vocation">
-                </div>
-                <div class="six columns vocation-right">
-                    <h3 class="title">
-                        ПРИЗВАНИЕ
-                    </h3>
-
-                    <p>
-                        Защита прав наших доверителей, индивидуальный подход к каждой проблеме на основе имеющегося
-                        профессионального опыта. Мы помогаем решить самые разные правовые проблемы: от бытовых до
-                        экономических. Мы ведем гражданские дела, оказываем юридическую помощь как физическим, так и
-                        юридическим лицам. Наши цены понятны, а офис находится в центре Москвы.
-                    </p>
-                    <p>
-                        Мы поддерживаем клиентов по российским и международным проектам любой сложности, включая
-                        структурирование отношений, разработку коммерческих договоров и политик, а также
-                        консультирование клиентов по иностранным юрисдикциям.
-                    </p>
-                    <button class="button-primary u-full-width">
-                        Узнать больше
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="services">
         <div class="container">
             <div class="row">
                 <h4 align="center">
                     <span class="services__header_span">
-                        УСЛУГИ
+                        Решение проблем Договоров Долевого Участия
                     </span>
                 </h4>
             </div>
@@ -218,62 +196,128 @@
                 </div>
                 <div class="six columns">
                     <h4>
-                        АВТОЮРИСТ
+                        Судебные процессы ДДУ
                     </h4>
-
                     <p>
-                        <span class="services__describe_list__p_span">●</span>Споры со страховой компанией
-                        (в т.ч. в суде).
+                        <span class="services__describe_list__p_span">●</span>Подача исковых заявлений
+                        по ДДУ и сопровождение судебного процесса
                     </p>
-
                     <p>
-                        <span class="services__describe_list__p_span">●</span> Избежание затягивания сроков согласования
-                        ремонта автомобиля на сервисной станции (КАСКО)
+                        <span class="services__describe_list__p_span">●</span>Взыскание с застройщика неустойки
+                        за просрочку сдачи дома в эксплуатацию
                     </p>
-
                     <p>
-                        <span class="services__describe_list__p_span">●</span>Содействие в получении страхового
-                        возмещения при банкротстве страховой организации
+                        <span class="services__describe_list__p_span">●</span>Расторжении договора и взыскании убытков
+                        и штрафов, причиненных неисполнением договора
+                    </p>
+                    <p>
+                        <span class="services__describe_list__p_span">●</span>Иные вопросы связанные с долевым участием
+                        и жилищно-строительными кооперативами
+                    </p>
+                    <p>
+                        <span class="services__describe_list__p_span">●</span>Признание права собственности на
+                        квартиры по ДДУ
                     </p>
                     <button class="button-primary u-full-width">
-                        Получить консультацию
+                        <a class="button-primary consultation__a_decoration" href="#openModal" onclick="getConsultation(this)">Получить консультацию</a>
                     </button>
                 </div>
             </div>
             <div class="row">
                 <div class="six columns inheritance_left">
                     <h4>
-                        НАСЛЕДСТВЕННОЕ ПРАВО
+                        Сопровождение сделок ДДУ
                     </h4>
 
                     <p>
-                        <span class="services__describe_list__p_span">●</span> Признание права собственности на
-                        наследство в т.ч. на имущество за рубежом
+                        <span class="services__describe_list__p_span">●</span> Юридические консультации по долевому
+                        строительству
                     </p>
 
                     <p>
-                        <span class="services__describe_list__p_span">●</span>Сопровождение процесса признания
-                        законности завещания или процесса о признании завещания недействительным
+                        <span class="services__describe_list__p_span">●</span>Правовой анализ договоров ДДУ и правовая
+                        экспертиза документов
                     </p>
 
                     <p>
-                        <span class="services__describe_list__p_span">●</span>Сопровождении дела о лишении наследования
+                        <span class="services__describe_list__p_span">●</span>Участие в переговорах с
+                        компанией-застройщиком
                     </p>
                     <p>
-                        <span class="services__describe_list__p_span">●</span>Восстановление сроков наследства
+                        <span class="services__describe_list__p_span">●</span>Сопровождение сделок по долевому
+                        строительству
                     </p>
                     <p>
-                        <span class="services__describe_list__p_span">●</span>Сопровождение процесса наследования
+                        <span class="services__describe_list__p_span">●</span>Правовое сопровождение сделок приобретения
+                        квартир в новостройках
                     </p>
 
                     <button class="button-primary u-full-width">
-                        Получить консультацию
+                        <a class="button-primary consultation__a_decoration" href="#openModal" onclick="getConsultation(this)">Получить консультацию</a>
                     </button>
                 </div>
                 <div class="six columns inheritance_right">
                     <div class="services__img_div">
                         <img class="services__img_div__img" src="{% static 'img/uslugs_ded.jpg'%}">
                     </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="success__numbers">
+        <div class="row">
+            <div class="container">
+                <div class="success__numbers__header">
+                    <h3 class="success__numbers__header_margin">
+                        Договоры Долевого Участия
+                    </h3>
+                    <h3 class="success__numbers__header_margin">
+                        в GSN-LawGroup
+                    </h3>
+
+                    <div class="offset-by-four four columns success__numbers__border"></div>
+                    <div class="twelve columns success__numbers__info">
+                        Направление ДДУ открылось в GSN-LawGroup в 2015 году. За год мы взяли 30 дел, из которых 27 дел
+                        закончилось выигрышем и еще 3 - мировым соглашением сторон. В общей сложности за 2015 год по
+                        судебным делам ДДУ с застройщиков было взыскано 35,8 млн. рублей.
+                    </div>
+                </div>
+                <div class="success__numbers__tree-tops success__numbers_center">
+                    <div class="four columns success__numbers__one-top">
+                        <h4>
+                            2015
+                        </h4>
+
+                        <div class="success__numbers__border"></div>
+                        <div class="success__numbers__text">
+                            год, с которого GSN-LawGroup вошли в область судебных процессов ДДУ
+                        </div>
+                    </div>
+                    <div class="four columns success__numbers__one-top success__numbers__one-top__center">
+                        <h4>
+                            27
+                        </h4>
+
+                        <div class="success__numbers__border"></div>
+                        <div class="success__numbers__text">
+                            дел закончились выигрышем в суде, еще 3 завершились мировым соглашением
+                        </div>
+                    </div>
+                    <div class="four columns success__numbers__one-top">
+                        <h4>
+                            35.8
+                        </h4>
+
+                        <div class="success__numbers__border"></div>
+                        <div class="success__numbers__text">
+                            млн. рублей было отсужено в рамках судебных процессов по ДДУ
+                        </div>
+                    </div>
+                </div>
+                <div class="offset-by-four four columns success__numbers__button">
+                    <button class="button-primary u-full-width">
+                        <a class="button-primary consultation__a_decoration" href="#openModal" onclick="getConsultation(this)">Получить консультацию</a>
+                    </button>
                 </div>
             </div>
         </div>
@@ -345,125 +389,6 @@
             </div>
         </div>
     </div>
-
-    <div class="success__numbers">
-        <div class="row">
-            <div class="container">
-                <div class="success__numbers__header">
-                    <h3>
-                        GSN-LAWGROUP В ЦИФРАХ
-                    </h3>
-
-                    <div class="offset-by-four four columns success__numbers__border"></div>
-                    <div class="twelve columns success__numbers__info">
-                        Юридическая фирма «GSN-group» создана с целью максимального использования законодательства в
-                        интересах юридических и физических лиц, комплексной юридической защиты и предотвращения
-                        возникновения возможных проблем.
-                    </div>
-                </div>
-                <div class="success__numbers__tree-tops success__numbers_center">
-                    <div class="four columns success__numbers__one-top">
-                        <h4>
-                            4
-                        </h4>
-
-                        <div class="success__numbers__border"></div>
-                        <div class="success__numbers__text">
-                            года работаем на рынке РФ
-                        </div>
-                    </div>
-                    <div class="four columns success__numbers__one-top success__numbers__one-top__center">
-                        <h4>
-                            379
-                        </h4>
-
-                        <div class="success__numbers__border"></div>
-                        <div class="success__numbers__text">
-                            решенных проблем благодаря своевременной помощи
-                        </div>
-                    </div>
-                    <div class="four columns success__numbers__one-top">
-                        <h4>
-                            91%
-                        </h4>
-
-                        <div class="success__numbers__border"></div>
-                        <div class="success__numbers__text">
-                            удовлетворенных клиентов, которые постоянно обращаются к нам
-                        </div>
-                    </div>
-                </div>
-                <div class="offset-by-four four columns success__numbers__button">
-                    <button class="button-primary u-full-width">Получить консультацию</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="team">
-        <div class="row">
-            <div class="container">
-                <h4 class="team__header">
-                    Команда
-                </h4>
-
-                <div class="offset-by-four four columns team__header_border"></div>
-            </div>
-        </div>
-        <div class="cards">
-            <div class="row">
-                <div class="container">
-                    <div class="three columns">
-                        <div>
-                            <img class="cards__img_circle" src="{% static 'img/face.jpg' %}" alt="">
-                        </div>
-                        <h4 class="cards__name">
-                            Первый
-                        </h4>
-
-                        <div class="cards__position">
-                            Директор
-                        </div>
-                    </div>
-                    <div class="three columns">
-                        <div>
-                            <img class="cards__img_circle" src="{% static 'img/face.jpg' %}" alt="">
-                        </div>
-                        <h4 class="cards__name">
-                            Второй
-                        </h4>
-
-                        <div class="cards__position">
-                            Заместитель директора
-                        </div>
-                    </div>
-                    <div class="three columns">
-                        <div>
-                            <img class="cards__img_circle" src="{% static 'img/face.jpg' %}" alt="">
-                        </div>
-                        <h4 class="cards__name">
-                            Третий
-                        </h4>
-
-                        <div class="cards__position">
-                            Главный менеджер
-                        </div>
-                    </div>
-                    <div class="three columns">
-                        <div>
-                            <img class="cards__img_circle" src="{% static 'img/face.jpg' %}" alt="">
-                        </div>
-                        <h4 class="cards__name">
-                            Четвертый
-                        </h4>
-
-                        <div class="cards__position">
-                            Менеджер
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="container">
         <div class="map">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2243.6054540613!2d37.66228021581532!3d55.78272398056139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b5358691250ee1%3A0x5410576d3047f98a!2z0JLQtdGA0YXQvdGP0Y8g0JrRgNCw0YHQvdC-0YHQtdC70YzRgdC60LDRjyDRg9C7LiwgMTfQkCwg0JzQvtGB0LrQstCwLCAxMDcxNDA!5e0!3m2!1sru!2sru!4v1476714417010" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen>
@@ -476,7 +401,29 @@
     <br>
     Политика конфиденциальности
 </footer>
+<div id="openModal" class="modalDialog">
 
+    <div>
+        <a title="Close" class="close" onclick="closeConsultation(this)">X</a>
+        <h6 class="modalDialog_center">ОСТАВЬТЕ КОНТАКТНЫЕ ДАННЫЕ ДЛЯ СВЯЗИ</h6>
+
+        <form action="{% url 'index' %}" method="post">
+            {% csrf_token %}
+            <div class="row">
+                <label class="modalDialog_align" for="name_input">Имя</label>
+                <input class="u-full-width askform__input_black" type="text" placeholder="Ваше имя" id="name_input">
+                <label for="phone_number">Телефон</label>
+                <input class="u-full-width askform__input_black" type="text" placeholder="Ваш телефон"
+                       id="phone_number">
+                <label for="question_input">Вопрос</label>
+                            <textarea class="u-full-width askform__input_black textarea_resize" name="question"
+                                      id="question_input"
+                                      placeholder="Ваш вопрос"></textarea>
+                <input class="u-full-width button-primary" type="submit" value="получить консультацию">
+            </div>
+        </form>
+    </div>
+</div>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="{% static 'django_ajax/js/jquery.ajax.min.js' %}"></script>
 <script type="text/javascript" src="{% static 'js/mask.js' %}"></script>

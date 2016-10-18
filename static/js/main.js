@@ -1,6 +1,13 @@
-/**
- * Created by sp41mer on 19.10.16.
- */
+function getConsultation(e){
+    document.getElementById('openModal').style.visibility = 'visible';
+    document.getElementById('openModal').style.opacity = '1'
+}
+
+function closeConsultation(e){
+    document.getElementById('openModal').style.visibility = 'hidden';
+    document.getElementById('openModal').style.opacity = '0'
+}
+
 $(document).ready(function(){
     $('.js__request_form').submit(function(e){
         e.preventDefault();
@@ -27,3 +34,4 @@ $(document).ready(function(){
     //var jsonForAjax = $(this).serialize();
     //$.post( "", jsonForAjax);
 });
+
