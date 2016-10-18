@@ -104,11 +104,11 @@
                         <div class="row">
                             <div class="askform__text"><h6>ОСТАВЬТЕ ЗАЯВКУ НА ЮРИДИЧЕСКУЮ КОНСУЛЬТАЦИЮ</h6></div>
                             <label for="name_input">Имя</label>
-                            {{ form.client_name | attr:"placeholder:Ваше имя" | add_class:"u-full-width"}}
+                            {{ form.client_name | attr:"placeholder:Ваше имя" | add_class:"u-full-width askform__input "}}
                             <label for="phone_number">Телефон</label>
-                            {{ form.phone_number | attr:"placeholder:Ваш телефон" | add_class:"u-full-width phone-validator"}}
+                            {{ form.phone_number | attr:"placeholder:Ваш телефон" | add_class:"u-full-width phone-validator askform__input "}}
                             <label for="question_input">Вопрос</label>
-                            {{ form.claim_text | attr:"placeholder:Ваш вопрос" | add_class:"u-full-width askform__input_black textarea_resize" }}
+                            {{ form.claim_text | attr:"placeholder:Ваш вопрос" | add_class:"u-full-width askform__input textarea_resize" }}
                             <input class="u-full-width button-primary" type="submit" value="получить консультацию">
                         </div>
                     </form>
@@ -407,7 +407,7 @@
         <a title="Close" class="close" onclick="closeConsultation(this)">X</a>
         <h6 class="modalDialog_center">ОСТАВЬТЕ КОНТАКТНЫЕ ДАННЫЕ ДЛЯ СВЯЗИ</h6>
 
-        <form action="{% url 'index' %}" method="post">
+        <form action="{% url 'landing:index' %}" method="post" class="js__request_form">
             {% csrf_token %}
             <div class="row">
                 <label class="modalDialog_align" for="name_input">Имя</label>
