@@ -10,14 +10,14 @@
 .header__name_padding {
     padding-left: 0px;
     display:inline;
-    font-size: 28px;
+    font-size: 32px;
 }
 
 .header__name_padding_colored {
     padding-left: 0px;
     color: #1383d7;
     display:inline;
-    font-size: 28px;
+    font-size: 32px;
 }
 
 
@@ -145,6 +145,14 @@
     margin-bottom: 40px;
 }
 
+.askform__input_black{
+    color: black;
+}
+
+.textarea_resize {
+    resize: none;
+}
+
 .main{
     background-color: #f3f3f3;
 }
@@ -160,4 +168,5 @@
 .fiches__margin{
     margin-bottom: 0;
 }
+
 
