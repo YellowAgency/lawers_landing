@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{% block title %}Юристы{% endblock title %}</title>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/validate.js/0.10.0/validate.min.js"></script>
+    <script   src="https://code.jquery.com/jquery-3.1.1.min.js"   integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8="   crossorigin="anonymous"></script>
+    <script src = "{% static 'js/main.js' %}"></script>
     <link rel="stylesheet" href="{% static 'css/lib/normalize.css' %}">
     <link rel="stylesheet" href="{% static 'css/lib/skeleton.css' %}">
     <link rel="stylesheet" href="{% static 'css/lib/font-awesome.min.css' %}">
@@ -91,13 +94,13 @@
                     </div>
                 </div>
                 <div class="six columns askform">
-                    <form action="{% url 'index' %}" method="post">
+                    <form action="{% url 'index' %}" method="post" class = "js__request_form">
                         {% csrf_token %}
                         <div class="row">
                             <label for="name_input">Имя</label>
-                            <input class="u-full-width" type="text" placeholder="Ваше имя" id="name_input">
+                            <input class="u-full-width" type="text" name = "name" placeholder="Ваше имя" id="name_input">
                             <label for="phone_number">Телефон</label>
-                            <input class="u-full-width" type="text" placeholder="Ваш телефон" id="phone_number">
+                            <input class="u-full-width" type="text" name = "phone_number" placeholder="Ваш телефон" id="phone_number">
                             <label for="question_input">Вопрос</label>
                             <textarea class="u-full-width" name="question" id="question_input"
                                       placeholder="Ваш вопрос"></textarea>
