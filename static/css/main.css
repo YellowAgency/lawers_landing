@@ -273,9 +273,8 @@
 	pointer-events: auto;
 }
 
-.modalDialog > div {
+.modalDialog__content {
     color: white;
-	width: 400px;
 	position: relative;
 	margin: 10% auto;
 	padding: 5px 20px 13px 20px;

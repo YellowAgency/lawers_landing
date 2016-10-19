@@ -368,30 +368,37 @@
     Политика конфиденциальности
 </footer>
 <div id="openModal" class="modalDialog">
+    <div class="container">
+        <div class="row">
+            <div class="six columns offset-by-three modalDialog__content">
+                <div>
+                    <a title="Close" class="close" onclick="closeConsultation(this)">X</a>
+                    <h6 class="modalDialog_center">ОСТАВЬТЕ КОНТАКТНЫЕ ДАННЫЕ ДЛЯ СВЯЗИ</h6>
 
-    <div>
-        <a title="Close" class="close" onclick="closeConsultation(this)">X</a>
-        <h6 class="modalDialog_center">ОСТАВЬТЕ КОНТАКТНЫЕ ДАННЫЕ ДЛЯ СВЯЗИ</h6>
+                    <form action="{% url 'landing:index' %}" method="post" class="js__request_form">
+                        {% csrf_token %}
+                        <div class="row">
+                            <label class="modalDialog_align" for="name_input">Имя</label>
+                            <input class="u-full-width askform__input_black" type="text" placeholder="Ваше имя"
+                                   id="name_input">
+                            <label for="phone_number">Телефон</label>
+                            <input class="u-full-width askform__input_black phone-validator" type="text"
+                                   placeholder="Ваш телефон"
+                                   id="phone_number">
+                            <label for="email">Email</label>
+                            <input class="u-full-width askform__input_black" type="email" placeholder="или Ваш email"
+                                   id="email">
 
-        <form action="{% url 'landing:index' %}" method="post" class="js__request_form">
-            {% csrf_token %}
-            <div class="row">
-                <label class="modalDialog_align" for="name_input">Имя</label>
-                <input class="u-full-width askform__input_black" type="text" placeholder="Ваше имя" id="name_input">
-                <label for="phone_number">Телефон</label>
-                <input class="u-full-width askform__input_black phone-validator" type="text" placeholder="Ваш телефон"
-                       id="phone_number">
-                <label for="email">Email</label>
-                <input class="u-full-width askform__input_black" type="email" placeholder="или Ваш email"
-                       id="email">
-
-                <label for="question_input">Вопрос</label>
+                            <label for="question_input">Вопрос</label>
                             <textarea class="u-full-width askform__input_black textarea_resize" name="question"
                                       id="question_input"
                                       placeholder="Ваш вопрос"></textarea>
-                <input class="u-full-width button-primary" type="submit" value="получить консультацию">
+                            <input class="u-full-width button-primary" type="submit" value="получить консультацию">
+                        </div>
+                    </form>
+                </div>
             </div>
-        </form>
+        </div>
     </div>
 </div>
 <script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
