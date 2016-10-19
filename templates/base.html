@@ -32,15 +32,14 @@
                     <h6 class="header__number_margin">
                         8 (926) 422 47 09
                     </h6>
-                    <button class="button-primary consultation" onclick="getConsultation(this)">
-                        <a class="button-primary consultation__a_decoration" href="#openModal">Получить консультацию</a>
-                    </button>
+                    <a class="button-primary consultation consultation__a_decoration" href="#openModal" onclick="getConsultation(this)">Получить консультацию</a>
+
                 </div>
             </div>
             <div class="row">
                 <div class="twelve column">
                     <h4 class="header__hello">
-                        Договоры Долевого Участия (ДДУ) -
+                        Договоры Долевого Участия (ДДУ)
                     </h4>
                     <h4 class="header__hello main__hello_border">
                         Качественная правовая помощь
@@ -113,70 +112,37 @@
                         </div>
                     </form>
                 </div>
-                    <div class="row">
-                        <div class="six columns offset-by-one and">
-                            <h5>
-                                А так же:
-                            </h5>
-                        </div>
-                    </div>
             </div>
         </div>
     </header>
 {% endblock header %}
 <main class="main">
-    <div class="main__functions">
-        <div class="row">
-            <div class="container">
-                <div class="four columns column main__functions__left-col">
-                    <div class="main__functions__font_color_center">
-                        <i class="fa fa-briefcase fa-4x" aria-hidden="true"></i>
-                    </div>
-                    <p class="andfunctions">
-                        Правовое сопровождение сделок
-                    </p>
-                    <ul class="main__functions__li">
-                        <li>
-                            Составление правовых документов
-                            и анализа ситуации
-                        </li>
-                        <li>
-                            Проверка чистоты сделки
-                        </li>
-                    </ul>
+    <div class="vocation-background">
+        <div class="container vocation">
+            <div class="row">
+                <div class="six columns vocation-left">
+                    <img src="{% static 'img/vocation.jpg' %}" class="img-vocation">
                 </div>
-                <div class="four columns main__functions__left-col">
-                    <div class="main__functions__font_color_center">
-                        <i class="fa fa-gavel fa-4x" aria-hidden="true"></i>
-                    </div>
-                    <div>
-                        <p class="andfunctions">
-                            Судебно-претензионная деятельность
-                        </p>
-                        <ul class="main__functions__li">
-                            <li>
-                                Досудебное регулирование спора
-                            </li>
-                            <li>
-                                Представительство интересов
-                                на любой стадии судопроизводства
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="four columns main__functions__left-col">
-                    <div class="main__functions__font_color_center">
-                        <i class="fa fa-commenting fa-4x" aria-hidden="true"></i>
-                    </div>
-                    <p class="andfunctions">
-                        Консультации
+                <div class="six columns vocation-right">
+                    <h4 class="title">
+                        ДДУ И ЗАКОН
+                    </h4>
+
+                    <p>
+                        ФЗ № 214 был принят для урегулирования рынка первичного жилья. С 2005 года закон защищает
+                        дольщиков (вкладчиков) путем заключения договора долевого участия, защищая их права, имущество,
+                        вклады и интересы.
                     </p>
-                    <ul class="main__functions__li">
-                        <li>
-                            Консультирование по различным
-                            правовым вопросам
-                        </li>
-                    </ul>
+                    <p>
+                        С коммерческой точки зрения это невыгодно, поэтому застройщики пытаются обойти этот закон,
+                        заключая вместо ДДУ другие, очень похожие виды договоров, которые ограничивают права граждан в
+                        данных вопросах.
+                    </p>
+                    <p>
+                        Юристы компании GSN-LawGroup помогает в обоих случаях: как при оформлении сделок, так и при
+                        судебных процессах с застройщиками. Узнайте больше о том, какие проблемы мы решаем изо дня в
+                        день.
+                    </p>
                 </div>
             </div>
         </div>
@@ -190,7 +156,7 @@
                     </span>
                 </h4>
             </div>
-            <div class="row">
+            <div class="row services_margin">
                 <div class="six columns services__img_div">
                     <img class="services__img_div__img" src="{% static 'img/uslugs_firstphoto.jpg' %}">
                 </div>
@@ -218,12 +184,12 @@
                         <span class="services__describe_list__p_span">●</span>Признание права собственности на
                         квартиры по ДДУ
                     </p>
-                    <button class="button-primary u-full-width">
+                    <div class="u-full-width">
                         <a class="button-primary consultation__a_decoration" href="#openModal" onclick="getConsultation(this)">Получить консультацию</a>
-                    </button>
+                    </div>
                 </div>
             </div>
-            <div class="row">
+            <div class="row services_margin">
                 <div class="six columns inheritance_left">
                     <h4>
                         Сопровождение сделок ДДУ
@@ -252,9 +218,9 @@
                         квартир в новостройках
                     </p>
 
-                    <button class="button-primary u-full-width">
+                    <div class="u-full-width">
                         <a class="button-primary consultation__a_decoration" href="#openModal" onclick="getConsultation(this)">Получить консультацию</a>
-                    </button>
+                    </div>
                 </div>
                 <div class="six columns inheritance_right">
                     <div class="services__img_div">

@@ -201,7 +201,9 @@
 .consultation{
     height: 20px;
     line-height: 20px;
-    font-size: 8px;
+    text-align: center;
+    border-radius: 5px;
+    padding: 2px 5px;
 }
 
 .consultation__a_decoration{
@@ -209,6 +211,10 @@
     color: white;
     background-color: #33C3F0;
     border-color: #33C3F0;
+    display: block;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 0;
 }
 
 .consultation__a_decoration:hover{
