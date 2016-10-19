@@ -39,6 +39,7 @@ $(document).ready(function(){
                   newThis.find('#id_phone_number').val('');
                   newThis.find('#id_claim_text').val('');
                   newThis.find('#id_email').val('');
+                  dataLayer.push({'event':'contactFormSent'})
                   swal("Спасибо!", "Заявка принята в обработку.", "success");
               });
               return false;
