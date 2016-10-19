@@ -1,5 +1,6 @@
 .header {
     background: url("../img/background1.jpg") center;
+    background-size: cover;
     color: white;
 }
 
@@ -8,13 +9,13 @@
 }
 
 .header__name_padding {
-    padding-left: 0px;
+    padding-left: 0;
     display:inline;
     font-size: 26px;
 }
 
 .header__name_padding_colored {
-    padding-left: 0px;
+    padding-left: 0;
     color: #1383d7;
     display:inline;
     font-size: 26px;
@@ -37,7 +38,7 @@
 }
 
 .main__hello_border {
-    margin-top: 0px;
+    margin-top: 0;
 }
 
 .border{
@@ -54,7 +55,7 @@
 }
 
 .fiches__text {
-   margin: 18px 0 0 20px;
+   margin: 23px 0 0 20px;
 }
 
 .main__functions {
@@ -99,7 +100,7 @@
 }
 
 .success__numbers__header_margin{
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 
 .success__numbers__border {
@@ -193,7 +194,7 @@
 }
 
 .fiches_p {
-    font-size: 20px;
+    font-size: 17px;;
     margin-bottom: 0;
 }
 
