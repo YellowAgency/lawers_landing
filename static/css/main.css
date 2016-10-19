@@ -50,12 +50,11 @@
 }
 
 .fiches {
-    margin: 65px 0;
-
+    margin: 40px 0;
 }
 
 .fiches__text {
-    margin: 13px 0 0 20px;
+   margin: 18px 0 0 20px;
 }
 
 .main__functions {
@@ -84,7 +83,7 @@
 
 .success__numbers {
     background: url("../img/success_numbers.jpg") center;
-    padding-top: 30px;
+    padding: 30px 0;
 }
 
 .success__numbers__tree-tops {
@@ -93,7 +92,6 @@
 
 .success__numbers__one-top {
     padding: 10px;
-    height: 150px;
 }
 
 .success__numbers__header {
@@ -194,7 +192,8 @@
     margin-top: 13px;
 }
 
-.fiches__margin{
+.fiches_p {
+    font-size: 20px;
     margin-bottom: 0;
 }
 
@@ -222,6 +221,20 @@
     color: white;
 }
 
+.consultation__a_decoration_small{
+    text-decoration: none;
+    color: white;
+    background-color: #33C3F0;
+    border-color: #33C3F0;
+    text-align: center;
+    border-radius: 5px;
+    padding: 3px 10px;
+}
+
+.consultation__a_decoration_small:hover{
+    text-decoration: none;
+    color: white;
+}
 
 /* стили модального окна */
 .modalDialog {
