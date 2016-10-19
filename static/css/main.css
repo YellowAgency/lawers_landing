@@ -42,14 +42,18 @@
 }
 
 .border{
-    border-bottom: 4px solid #1383d7;
+    border-bottom: 2px solid #1383d7;
 }
 
 .header__hello_margin {
+    margin-top: 5px;
+    font-size: 20px;
     text-align: center;
     margin-bottom: 30px;
 }
-
+.header__hello_font42{
+    font-size: 42px;
+}
 .fiches {
     margin: 40px 0;
 }
