@@ -300,3 +300,17 @@
 }
 
 .close:hover { background: #00d9ff; }
+
+/* Стили для форм (я не знаю куда это пихать, ненавижу БЭМ) */
+.name__span__error{
+    color:red;
+    display: none;
+}
+.number__span__error{
+    color:red;
+    display: none;
+}
+.question__span__error{
+    color:red;
+    display: none;
+}
