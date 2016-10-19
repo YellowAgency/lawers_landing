@@ -104,6 +104,8 @@
                             {{ form.client_name | attr:"placeholder:Ваше имя" | add_class:"u-full-width askform__input "}}
                             <label for="phone_number">Телефон</label><span class = "number__span__error">Введите Ваш номер телефона</span>
                             {{ form.phone_number | attr:"placeholder:Ваш телефон" | add_class:"u-full-width phone-validator askform__input "}}
+                            <label for="email_input">Email</label><span class = "name__span__error">Введите Ваше имя</span>
+                            {{ form.email | attr:"placeholder:или Ваш email" | add_class:"u-full-width askform__input "}}
                             <label for="question_input">Вопрос</label><span class = "question__span__error">Введите Ваш вопрос</span>
                             {{ form.claim_text | attr:"placeholder:Ваш вопрос" | add_class:"u-full-width askform__input textarea_resize" }}
                             <input class="u-full-width button-primary" type="submit" value="получить консультацию">
@@ -236,7 +238,7 @@
                         Договоры Долевого Участия
                     </h3>
                     <h3 class="success__numbers__header_margin">
-                        в GSN-LawGroup
+                        в GSN-LAWGROUP
                     </h3>
 
                     <div class="offset-by-four four columns success__numbers__border"></div>
@@ -381,8 +383,12 @@
                 <label class="modalDialog_align" for="name_input">Имя</label>
                 <input class="u-full-width askform__input_black" type="text" placeholder="Ваше имя" id="name_input">
                 <label for="phone_number">Телефон</label>
-                <input class="u-full-width askform__input_black" type="text" placeholder="Ваш телефон"
+                <input class="u-full-width askform__input_black phone-validator" type="text" placeholder="Ваш телефон"
                        id="phone_number">
+                <label for="email">Email</label>
+                <input class="u-full-width askform__input_black" type="email" placeholder="или Ваш email"
+                       id="email">
+
                 <label for="question_input">Вопрос</label>
                             <textarea class="u-full-width askform__input_black textarea_resize" name="question"
                                       id="question_input"
