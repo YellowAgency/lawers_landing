@@ -9,7 +9,7 @@ class ClaimForm(forms.ModelForm):
         fields = ['client_name', 'phone_number', 'claim_text', 'email']
 
     def clean(self):
-        cleaned_data = self.cleaned_data
+        cleaned_data = super(ClaimForm, self).clean()
         phone_number = cleaned_data.get("phone_number")
         email = cleaned_data.get("email")
 
