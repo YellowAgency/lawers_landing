@@ -337,14 +337,18 @@
                          ЗАДАЙТЕ ИХ ПРЯМО СЕЙЧАС
                      </span>
 
-                    <form action="#">
+                    <form action="{% url 'landing:process' %}" method="post" class = "js__request_form">
+                        {% csrf_token %}
                         <div class="row">
-                            <label for="name_input">Имя</label>
-                            <input class="u-full-width askform__input_black" type="text" placeholder="Ваше имя" id="name_input">
-                            <label for="phone_number">Телефон</label>
-                            <input class="u-full-width askform__input_black" type="text" placeholder="Ваш телефон" id="phone_number">
-                            <label for="question_input">Вопрос</label>
-                            <textarea class="u-full-width askform__input_black textarea_resize"  placeholder="Ваш вопрос" id="question_input"></textarea>
+                            <label for="name_input">Имя</label><span class = "name__span__error">Введите Ваше имя</span>
+                            {{ form.client_name | attr:"placeholder:Ваше имя" | add_class:"u-full-width askform__input_black"}}
+
+                            <label for="phone_number">Телефон</label><span class = "number__span__error">Введите Ваш номер телефона</span>
+                            {{ form.phone_number |attr:"placeholder:Ваш телефон" | add_class:"u-full-width phone-validator askform__input_black " }}
+
+                            <label for="question_input">Вопрос</label><span class = "question__span__error">Введите Ваш вопрос</span>
+                            {{ form.claim_text | attr:"placeholder:Ваш вопрос" | add_class:"u-full-width textarea_resize askform__input_black" }}
+
                             <input class="u-full-width button-primary" type="submit" value="получить консультацию">
                         </div>
                     </form>

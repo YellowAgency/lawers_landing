@@ -29,6 +29,7 @@ $(document).ready(function(){
               $(this).find('.number__span__error').hide();
 
               ajaxPost(url, myForm, function(e){
+                  console.log(e);
                   newThis.find('#id_client_name').val('');
                   newThis.find('#id_phone_number').val('');
                   newThis.find('#id_claim_text').val('');
