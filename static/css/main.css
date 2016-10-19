@@ -318,6 +318,10 @@
     color:red;
     display: none;
 }
+.email__span__error{
+    color:red;
+    display: none;
+}
 
 .js__request_form{
     margin-bottom: 0px;
