@@ -1,5 +1,6 @@
 .header {
     background: url("../img/background1.jpg") center;
+    background-size: cover;
     color: white;
 }
 
@@ -8,13 +9,13 @@
 }
 
 .header__name_padding {
-    padding-left: 0px;
+    padding-left: 0;
     display:inline;
     font-size: 26px;
 }
 
 .header__name_padding_colored {
-    padding-left: 0px;
+    padding-left: 0;
     color: #1383d7;
     display:inline;
     font-size: 26px;
@@ -37,7 +38,7 @@
 }
 
 .main__hello_border {
-    margin-top: 0px;
+    margin-top: 0;
 }
 
 .border{
@@ -50,12 +51,11 @@
 }
 
 .fiches {
-    margin: 65px 0;
-
+    margin: 40px 0;
 }
 
 .fiches__text {
-    margin: 13px 0 0 20px;
+   margin: 23px 0 0 20px;
 }
 
 .main__functions {
@@ -84,7 +84,7 @@
 
 .success__numbers {
     background: url("../img/success_numbers.jpg") center;
-    padding-top: 30px;
+    padding: 30px 0;
 }
 
 .success__numbers__tree-tops {
@@ -93,7 +93,6 @@
 
 .success__numbers__one-top {
     padding: 10px;
-    height: 150px;
 }
 
 .success__numbers__header {
@@ -101,7 +100,7 @@
 }
 
 .success__numbers__header_margin{
-    margin-bottom: 0px;
+    margin-bottom: 0;
 }
 
 .success__numbers__border {
@@ -194,14 +193,17 @@
     margin-top: 13px;
 }
 
-.fiches__margin{
+.fiches_p {
+    font-size: 17px;;
     margin-bottom: 0;
 }
 
 .consultation{
     height: 20px;
     line-height: 20px;
-    font-size: 8px;
+    text-align: center;
+    border-radius: 5px;
+    padding: 2px 5px;
 }
 
 .consultation__a_decoration{
@@ -209,6 +211,10 @@
     color: white;
     background-color: #33C3F0;
     border-color: #33C3F0;
+    display: block;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 0;
 }
 
 .consultation__a_decoration:hover{
@@ -216,6 +222,20 @@
     color: white;
 }
 
+.consultation__a_decoration_small{
+    text-decoration: none;
+    color: white;
+    background-color: #33C3F0;
+    border-color: #33C3F0;
+    text-align: center;
+    border-radius: 5px;
+    padding: 3px 10px;
+}
+
+.consultation__a_decoration_small:hover{
+    text-decoration: none;
+    color: white;
+}
 
 /* стили модального окна */
 .modalDialog {

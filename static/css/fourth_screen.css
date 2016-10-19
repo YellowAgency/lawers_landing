@@ -1,6 +1,11 @@
 .services{
     background-color: #f6f6f6;
 }
+
+.services_margin{
+    margin-bottom: 30px;
+}
+
 .services .row{
 }
 .services__header_span{
