@@ -103,11 +103,11 @@
                         {% csrf_token %}
                         <div class="row">
                             <div class="askform__text"><h6>ОСТАВЬТЕ ЗАЯВКУ НА ЮРИДИЧЕСКУЮ КОНСУЛЬТАЦИЮ</h6></div>
-                            <label for="name_input">Имя</label>
+                            <label for="name_input">Имя</label><span class = "name__span__error">Введите Ваше имя</span>
                             {{ form.client_name | attr:"placeholder:Ваше имя" | add_class:"u-full-width askform__input "}}
-                            <label for="phone_number">Телефон</label>
+                            <label for="phone_number">Телефон</label><span class = "number__span__error">Введите Ваш номер телефона</span>
                             {{ form.phone_number | attr:"placeholder:Ваш телефон" | add_class:"u-full-width phone-validator askform__input "}}
-                            <label for="question_input">Вопрос</label>
+                            <label for="question_input">Вопрос</label><span class = "question__span__error">Введите Ваш вопрос</span>
                             {{ form.claim_text | attr:"placeholder:Ваш вопрос" | add_class:"u-full-width askform__input textarea_resize" }}
                             <input class="u-full-width button-primary" type="submit" value="получить консультацию">
                         </div>
