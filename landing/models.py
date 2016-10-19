@@ -13,3 +13,11 @@ class Claim(models.Model):
     claim_text = models.TextField(max_length=500, blank=True)
     email = models.EmailField(blank=True)
     claim_date = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return 'client_name: {client_name}, phone_number: {phone_number}, claim_text: {claim_text}, email: {email}'.format(
+            client_name=self.client_name,
+            phone_number=self.phone_number,
+            claim_text=self.claim_text,
+            email=self.email,
+        )

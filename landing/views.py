@@ -16,5 +16,9 @@ class Index(TemplateView):
 class ProcessForm(AJAXMixin, CreateView):
     form_class = ClaimForm
 
+    def form_valid(self, form):
+        self.object = form.save()
+        return {'obj': self.object}
+
     def form_invalid(self, form):
         return form.errors.as_json(escape_html=True)
