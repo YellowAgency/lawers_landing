@@ -32,7 +32,8 @@
                     <h6 class="header__number_margin">
                         8 (926) 422 47 09
                     </h6>
-                    <a class="button-primary consultation consultation__a_decoration_small" href="#openModal" onclick="getConsultation(this)">Получить консультацию</a>
+                    <a class="button-primary consultation consultation__a_decoration_small" href="#openModal"
+                       onclick="getConsultation(this)">Получить консультацию</a>
 
                 </div>
             </div>
@@ -43,6 +44,7 @@
                     </h4>
                     <h4 class="header__hello main__hello_border">
                     </h4>
+
                     <div class="six columns offset-by-three border">
                     </div>
                     <h5 class="header__hello header__hello_margin">
@@ -62,6 +64,7 @@
                             <p class="fiches_p">
                                 Правовые консультации и
                             </p>
+
                             <p class="fiches_p">
                                 оформление документов ДДУ
                             </p>
@@ -76,6 +79,7 @@
                             <p class="fiches_p">
                                 Взыскание с застройщика
                             </p>
+
                             <p class="fiches_p">
                                 всех видов неустоек в суде
                             </p>
@@ -89,6 +93,7 @@
                             <p class="fiches_p">
                                 Признание прав собственности
                             </p>
+
                             <p class="fiches_p">
                                 и полная юридическая защита
                             </p>
@@ -96,17 +101,17 @@
                     </div>
                 </div>
                 <div class="six columns askform">
-                    <form action="{% url 'landing:process' %}" method="post" class = "js__request_form">
+                    <form action="{% url 'landing:process' %}" method="post" class="js__request_form">
                         {% csrf_token %}
                         <div class="row">
                             <div class="askform__text"><h6>ОСТАВЬТЕ ЗАЯВКУ НА ЮРИДИЧЕСКУЮ КОНСУЛЬТАЦИЮ</h6></div>
-                            <label for="name_input">Имя</label><span class = "name__span__error">Введите Ваше имя</span>
-                            {{ form.client_name | attr:"placeholder:Ваше имя" | add_class:"u-full-width askform__input "}}
-                            <label for="phone_number">Телефон</label><span class = "number__span__error">Введите Ваш номер телефона</span>
-                            {{ form.phone_number | attr:"placeholder:Ваш телефон" | add_class:"u-full-width phone-validator askform__input "}}
-                            <label for="email_input">Email</label><span class = "email__span__error">Введите правильный email</span>
-                            {{ form.email | attr:"placeholder:или Ваш email" | add_class:"u-full-width askform__input "}}
-                            <label for="question_input">Вопрос</label><span class = "question__span__error">Введите Ваш вопрос</span>
+                            <label for="name_input">Имя</label><span class="name__span__error">Введите Ваше имя</span>
+                            {{ form.client_name | attr:"placeholder:Ваше имя" | add_class:"u-full-width askform__input " }}
+                            <label for="phone_number">Телефон</label><span class="number__span__error">Введите Ваш номер телефона</span>
+                            {{ form.phone_number | attr:"placeholder:Ваш телефон" | add_class:"u-full-width phone-validator askform__input " }}
+                            <label for="email_input">Email</label><span class="email__span__error">Введите правильный email</span>
+                            {{ form.email | attr:"placeholder:или Ваш email" | add_class:"u-full-width askform__input " }}
+                            <label for="question_input">Вопрос</label><span class="question__span__error">Введите Ваш вопрос</span>
                             {{ form.claim_text | attr:"placeholder:Ваш вопрос" | add_class:"u-full-width askform__input textarea_resize" }}
                             <input class="u-full-width button-primary" type="submit" value="получить консультацию">
                         </div>
@@ -133,11 +138,13 @@
                         дольщиков (вкладчиков) путем заключения договора долевого участия, защищая их права, имущество,
                         вклады и интересы.
                     </p>
+
                     <p>
                         С коммерческой точки зрения это невыгодно, поэтому застройщики пытаются обойти этот закон,
                         заключая вместо ДДУ другие, очень похожие виды договоров, которые ограничивают права граждан в
                         данных вопросах.
                     </p>
+
                     <p>
                         Юристы компании GSN-LawGroup помогает в обоих случаях: как при оформлении сделок, так и при
                         судебных процессах с застройщиками. Узнайте больше о том, какие проблемы мы решаем изо дня в
@@ -164,28 +171,35 @@
                     <h4>
                         Судебные процессы ДДУ
                     </h4>
+
                     <p>
                         <span class="services__describe_list__p_span">●</span>Подача исковых заявлений
                         по ДДУ и сопровождение судебного процесса
                     </p>
+
                     <p>
                         <span class="services__describe_list__p_span">●</span>Взыскание с застройщика неустойки
                         за просрочку сдачи дома в эксплуатацию
                     </p>
+
                     <p>
                         <span class="services__describe_list__p_span">●</span>Расторжении договора и взыскании убытков
                         и штрафов, причиненных неисполнением договора
                     </p>
+
                     <p>
                         <span class="services__describe_list__p_span">●</span>Иные вопросы связанные с долевым участием
                         и жилищно-строительными кооперативами
                     </p>
+
                     <p>
                         <span class="services__describe_list__p_span">●</span>Признание права собственности на
                         квартиры по ДДУ
                     </p>
+
                     <div class="u-full-width">
-                        <a class="button-primary consultation__a_decoration" href="#openModal" onclick="getConsultation(this)">Получить консультацию</a>
+                        <a class="button-primary consultation__a_decoration" href="#openModal"
+                           onclick="getConsultation(this)">Получить консультацию</a>
                     </div>
                 </div>
             </div>
@@ -209,22 +223,25 @@
                         <span class="services__describe_list__p_span">●</span>Участие в переговорах с
                         компанией-застройщиком
                     </p>
+
                     <p>
                         <span class="services__describe_list__p_span">●</span>Сопровождение сделок по долевому
                         строительству
                     </p>
+
                     <p>
                         <span class="services__describe_list__p_span">●</span>Правовое сопровождение сделок приобретения
                         квартир в новостройках
                     </p>
 
                     <div class="u-full-width">
-                        <a class="button-primary consultation__a_decoration" href="#openModal" onclick="getConsultation(this)">Получить консультацию</a>
+                        <a class="button-primary consultation__a_decoration" href="#openModal"
+                           onclick="getConsultation(this)">Получить консультацию</a>
                     </div>
                 </div>
                 <div class="six columns inheritance_right">
                     <div class="services__img_div">
-                        <img class="services__img_div__img" src="{% static 'img/uslugs_ded.jpg'%}">
+                        <img class="services__img_div__img" src="{% static 'img/uslugs_ded.jpg' %}">
                     </div>
                 </div>
             </div>
@@ -237,6 +254,7 @@
                     <h3 class="success__numbers__header_margin">
                         Договоры Долевого Участия
                     </h3>
+
                     <h3 class="success__numbers__header_margin">
                         в GSN-LAWGROUP
                     </h3>
@@ -282,7 +300,8 @@
                 </div>
                 <div class="offset-by-four four columns success__numbers__button">
                     <div class="u-full-width">
-                        <a class="button-primary consultation__a_decoration" href="#openModal" onclick="getConsultation(this)">Получить консультацию</a>
+                        <a class="button-primary consultation__a_decoration" href="#openModal"
+                           onclick="getConsultation(this)">Получить консультацию</a>
                     </div>
                 </div>
             </div>
@@ -339,19 +358,19 @@
                          ЗАДАЙТЕ ИХ ПРЯМО СЕЙЧАС
                      </span>
 
-                    <form action="{% url 'landing:process' %}" method="post" class = "js__request_form">
+                    <form action="{% url 'landing:process' %}" method="post" class="js__request_form">
                         {% csrf_token %}
                         <div class="row">
-                            <label for="name_input">Имя</label><span class = "name__span__error">Введите Ваше имя</span>
-                            {{ form.client_name | attr:"placeholder:Ваше имя" | add_class:"u-full-width askform__input_black"}}
+                            <label for="name_input">Имя</label><span class="name__span__error">Введите Ваше имя</span>
+                            {{ form.client_name | attr:"placeholder:Ваше имя" | add_class:"u-full-width askform__input_black" }}
 
-                            <label for="phone_number">Телефон</label><span class = "number__span__error">Введите Ваш номер телефона</span>
+                            <label for="phone_number">Телефон</label><span class="number__span__error">Введите Ваш номер телефона</span>
                             {{ form.phone_number |attr:"placeholder:Ваш телефон" | add_class:"u-full-width phone-validator askform__input_black " }}
 
-                            <label for="email_input">Email</label><span class = "email__span__error">Введите правильный email</span>
-                            {{ form.email | attr:"placeholder:или Ваш email" | add_class:"u-full-width askform__input_black "}}
+                            <label for="email_input">Email</label><span class="email__span__error">Введите правильный email</span>
+                            {{ form.email | attr:"placeholder:или Ваш email" | add_class:"u-full-width askform__input_black " }}
 
-                            <label for="question_input">Вопрос</label><span class = "question__span__error">Введите Ваш вопрос</span>
+                            <label for="question_input">Вопрос</label><span class="question__span__error">Введите Ваш вопрос</span>
                             {{ form.claim_text | attr:"placeholder:Ваш вопрос" | add_class:"u-full-width textarea_resize askform__input_black" }}
 
                             <input class="u-full-width button-primary" type="submit" value="получить консультацию">
@@ -364,7 +383,8 @@
     </div>
     <div class="container">
         <div class="map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2243.6054540613!2d37.66228021581532!3d55.78272398056139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b5358691250ee1%3A0x5410576d3047f98a!2z0JLQtdGA0YXQvdGP0Y8g0JrRgNCw0YHQvdC-0YHQtdC70YzRgdC60LDRjyDRg9C7LiwgMTfQkCwg0JzQvtGB0LrQstCwLCAxMDcxNDA!5e0!3m2!1sru!2sru!4v1476714417010" width="100%" height="450" frameborder="0" style="border:0" allowfullscreen>
+            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2243.6054540613!2d37.66228021581532!3d55.78272398056139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x46b5358691250ee1%3A0x5410576d3047f98a!2z0JLQtdGA0YXQvdGP0Y8g0JrRgNCw0YHQvdC-0YHQtdC70YzRgdC60LDRjyDRg9C7LiwgMTfQkCwg0JzQvtGB0LrQstCwLCAxMDcxNDA!5e0!3m2!1sru!2sru!4v1476714417010"
+                    width="100%" height="450" frameborder="0" style="border:0" allowfullscreen>
             </iframe>
         </div>
     </div>
@@ -375,35 +395,43 @@
     Политика конфиденциальности
 </footer>
 <div id="openModal" class="modalDialog">
+    <div class="container">
+        <div class="row">
+            <div class="six columns offset-by-three modalDialog__content">
 
-    <div>
-        <a title="Close" class="close" onclick="closeConsultation(this)">X</a>
-        <h6 class="modalDialog_center">ОСТАВЬТЕ КОНТАКТНЫЕ ДАННЫЕ ДЛЯ СВЯЗИ</h6>
+                <a title="Close" class="close" onclick="closeConsultation(this)">X</a>
+                <h6 class="modalDialog_center">ОСТАВЬТЕ КОНТАКТНЫЕ ДАННЫЕ ДЛЯ СВЯЗИ</h6>
 
-        <form action="{% url 'landing:process' %}" method="post" class="js__request_form">
-            {% csrf_token %}
-            <div class="row">
-                <label class="modalDialog_align" for="name_input">Имя</label><span class = "name__span__error">Введите Ваше имя</span>
-                {{ form.client_name | attr:"placeholder:Ваше имя" | add_class:"u-full-width askform__input_black"}}
+                <form action="{% url 'landing:process' %}" method="post" onsubmit="closeConsultation(this)" class="js__request_form">
+                    {% csrf_token %}
+                    <div class="row">
+                        <label class="modalDialog_align" for="name_input">Имя</label><span class="name__span__error">Введите Ваше имя</span>
+                        {{ form.client_name | attr:"placeholder:Ваше имя" | add_class:"u-full-width askform__input_black" }}
 
-                <label for="phone_number">Телефон</label><span class = "number__span__error">Введите Ваш номер телефона</span>
-                {{ form.phone_number |attr:"placeholder:Ваш телефон" | add_class:"u-full-width phone-validator askform__input_black " }}
+                        <label for="phone_number">Телефон</label><span class="number__span__error">Введите Ваш номер телефона</span>
+                        {{ form.phone_number |attr:"placeholder:Ваш телефон" | add_class:"u-full-width phone-validator askform__input_black " }}
 
-                <label for="email_input">Email</label><span class = "email__span__error">Введите правильный email</span>
-                {{ form.email | attr:"placeholder:или Ваш email" | add_class:"u-full-width askform__input_black "}}
+                        <label for="email_input">Email</label><span
+                            class="email__span__error">Введите правильный email</span>
+                        {{ form.email | attr:"placeholder:или Ваш email" | add_class:"u-full-width askform__input_black " }}
 
-                 <label for="question_input">Вопрос</label><span class = "question__span__error">Введите Ваш вопрос</span>
-                {{ form.claim_text | attr:"placeholder:Ваш вопрос" | add_class:"u-full-width textarea_resize askform__input_black" }}
+                        <label for="question_input">Вопрос</label><span
+                            class="question__span__error">Введите Ваш вопрос</span>
+                        {{ form.claim_text | attr:"placeholder:Ваш вопрос" | add_class:"u-full-width textarea_resize askform__input_black" }}
 
-                <input class="u-full-width button-primary" type="submit" value="получить консультацию">
+                        <input class="u-full-width button-primary" type="submit" value="получить консультацию">
+                    </div>
+                </form>
             </div>
-        </form>
+        </div>
     </div>
 </div>
-<script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.1.1.min.js"
+        integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="{% static 'django_ajax/js/jquery.ajax.min.js' %}"></script>
 <script type="text/javascript" src="{% static 'js/mask.js' %}"></script>
-<script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.1/jquery.validate.min.js"></script>
-<script src = "{% static 'js/main.js' %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.1/jquery.validate.min.js"></script>
+<script src="{% static 'js/main.js' %}"></script>
+<script src="{% static 'js/sweetalert.min.js' %}"></script>
 </body>
 </html>
