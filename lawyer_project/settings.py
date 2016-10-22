@@ -22,6 +22,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SECRET_KEY = os.environ.get('SECRET_KEY', '')
 
+
 def env_var(key, default=None):
     """Retrieves env vars and makes Python boolean replacements"""
     val = os.environ.get(key, default)
@@ -30,6 +31,7 @@ def env_var(key, default=None):
     elif val == 'False':
         val = False
     return val
+
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = env_var('DJ_DEBUG', False)

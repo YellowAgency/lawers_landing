@@ -1,11 +1,10 @@
 from django.contrib import admin
 
-# Register your models here.
 from landing.models import Claim
 
 
 class ClaimAdmin(admin.ModelAdmin):
-    list_display = ['client_name', 'phone_number', 'claim_date']
+    list_display = ['phone_number', 'claim_text', 'claim_date', 'seen']
     ordering = ['claim_date']
 
 

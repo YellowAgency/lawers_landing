@@ -122,12 +122,8 @@
                         {% csrf_token %}
                         <div class="row">
                             <div class="askform__text"><h6>ОСТАВЬТЕ ЗАЯВКУ НА ЮРИДИЧЕСКУЮ КОНСУЛЬТАЦИЮ</h6></div>
-                            <label for="name_input">Имя</label><span class="name__span__error">Введите Ваше имя</span>
-                            {{ form.client_name | attr:"placeholder:Ваше имя" | add_class:"u-full-width askform__input " }}
                             <label for="phone_number">Телефон</label><span class="number__span__error">Введите Ваш номер телефона</span>
                             {{ form.phone_number | attr:"placeholder:Ваш телефон" | add_class:"u-full-width phone-validator askform__input " }}
-                            <label for="email_input">Email</label><span class="email__span__error">Введите правильный email</span>
-                            {{ form.email | attr:"placeholder:или Ваш email" | add_class:"u-full-width askform__input " }}
                             <label for="question_input">Вопрос</label><span class="question__span__error">Введите Ваш вопрос</span>
                             {{ form.claim_text | attr:"placeholder:Ваш вопрос" | add_class:"u-full-width askform__input textarea_resize" }}
                             <input class="u-full-width button-primary" type="submit" value="получить консультацию">
@@ -378,14 +374,8 @@
                     <form action="{% url 'landing:process' %}" method="post" class="js__request_form">
                         {% csrf_token %}
                         <div class="row">
-                            <label for="name_input">Имя</label><span class="name__span__error">Введите Ваше имя</span>
-                            {{ form.client_name | attr:"placeholder:Ваше имя" | add_class:"u-full-width askform__input_black" }}
-
                             <label for="phone_number">Телефон</label><span class="number__span__error">Введите Ваш номер телефона</span>
                             {{ form.phone_number |attr:"placeholder:Ваш телефон" | add_class:"u-full-width phone-validator askform__input_black " }}
-
-                            <label for="email_input">Email</label><span class="email__span__error">Введите правильный email</span>
-                            {{ form.email | attr:"placeholder:или Ваш email" | add_class:"u-full-width askform__input_black " }}
 
                             <label for="question_input">Вопрос</label><span class="question__span__error">Введите Ваш вопрос</span>
                             {{ form.claim_text | attr:"placeholder:Ваш вопрос" | add_class:"u-full-width textarea_resize askform__input_black" }}
@@ -422,18 +412,10 @@
                 <form action="{% url 'landing:process' %}" method="post" onsubmit="closeConsultation(this)" class="js__request_form">
                     {% csrf_token %}
                     <div class="row">
-                        <label class="modalDialog_align" for="name_input">Имя</label><span class="name__span__error">Введите Ваше имя</span>
-                        {{ form.client_name | attr:"placeholder:Ваше имя" | add_class:"u-full-width askform__input_black" }}
-
                         <label for="phone_number">Телефон</label><span class="number__span__error">Введите Ваш номер телефона</span>
                         {{ form.phone_number |attr:"placeholder:Ваш телефон" | add_class:"u-full-width phone-validator askform__input_black " }}
 
-                        <label for="email_input">Email</label><span
-                            class="email__span__error">Введите правильный email</span>
-                        {{ form.email | attr:"placeholder:или Ваш email" | add_class:"u-full-width askform__input_black " }}
-
-                        <label for="question_input">Вопрос</label><span
-                            class="question__span__error">Введите Ваш вопрос</span>
+                        <label for="question_input">Вопрос</label><span class="question__span__error">Введите Ваш вопрос</span>
                         {{ form.claim_text | attr:"placeholder:Ваш вопрос" | add_class:"u-full-width textarea_resize askform__input_black" }}
 
                         <input class="u-full-width button-primary" type="submit" value="получить консультацию">
