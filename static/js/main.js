@@ -26,7 +26,7 @@ $(document).ready(function(){
                   console.log(e);
                   newThis.find('#id_phone_number').val('');
                   newThis.find('#id_claim_text').val('');
-                  dataLayer.push({'event':'contactFormSent'})
+                  dataLayer.push({'event':'contactFormSent'});
                   swal("Спасибо!", "Заявка принята в обработку.", "success");
               });
               closeConsultation(this);
