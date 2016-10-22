@@ -1,6 +1,7 @@
 /**
  * Created by sp41mer on 19.10.16.
  */
+//ЭТОЙ ЛИБЫ БОЛЬШЕ НЕТ В ПРОЕКТЕ ПОТОМУ ЧТО ОНА - ФУ
 /*
     jQuery Masked Input Plugin
     Copyright (c) 2007 - 2015 Josh Bush (digitalbush.com)

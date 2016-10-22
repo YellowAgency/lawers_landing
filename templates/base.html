@@ -122,7 +122,7 @@
                         {% csrf_token %}
                         <div class="row">
                             <div class="askform__text"><h6>ОСТАВЬТЕ ЗАЯВКУ НА ЮРИДИЧЕСКУЮ КОНСУЛЬТАЦИЮ</h6></div>
-                            <label for="phone_number">Телефон</label><span class="number__span__error">Введите Ваш номер телефона</span>
+                            <label for="phone_number">Телефон</label><span class="number__span__error">Введите правильный номер телефона</span>
                             {{ form.phone_number | attr:"placeholder:Ваш телефон" | add_class:"u-full-width phone-validator askform__input " }}
                             <label for="question_input">Вопрос</label><span class="question__span__error">Введите Ваш вопрос</span>
                             {{ form.claim_text | attr:"placeholder:Ваш вопрос" | add_class:"u-full-width askform__input textarea_resize" }}
@@ -374,7 +374,7 @@
                     <form action="{% url 'landing:process' %}" method="post" class="js__request_form">
                         {% csrf_token %}
                         <div class="row">
-                            <label for="phone_number">Телефон</label><span class="number__span__error">Введите Ваш номер телефона</span>
+                            <label for="phone_number">Телефон</label><span class="number__span__error">Введите правильный номер телефона</span>
                             {{ form.phone_number |attr:"placeholder:Ваш телефон" | add_class:"u-full-width phone-validator askform__input_black " }}
 
                             <label for="question_input">Вопрос</label><span class="question__span__error">Введите Ваш вопрос</span>
@@ -409,7 +409,7 @@
                 <a title="Close" class="close" onclick="closeConsultation(this)">X</a>
                 <h6 class="modalDialog_center">ОСТАВЬТЕ КОНТАКТНЫЕ ДАННЫЕ ДЛЯ СВЯЗИ</h6>
 
-                <form action="{% url 'landing:process' %}" method="post" onsubmit="closeConsultation(this)" class="js__request_form">
+                <form action="{% url 'landing:process' %}" method="post" class="js__request_form">
                     {% csrf_token %}
                     <div class="row">
                         <label for="phone_number">Телефон</label><span class="number__span__error">Введите Ваш номер телефона</span>
@@ -428,7 +428,7 @@
 <script src="https://code.jquery.com/jquery-3.1.1.min.js"
         integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"></script>
 <script type="text/javascript" src="{% static 'django_ajax/js/jquery.ajax.min.js' %}"></script>
-<script type="text/javascript" src="{% static 'js/mask.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/inputmask.js' %}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.15.1/jquery.validate.min.js"></script>
 <script src="{% static 'js/main.js' %}"></script>
 <script src="{% static 'js/sweetalert.min.js' %}"></script>

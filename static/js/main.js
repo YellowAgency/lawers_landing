@@ -12,8 +12,9 @@ $(document).ready(function(){
     $('.js__request_form').submit(function(e){
         e.preventDefault();
         var url = $(this).attr('action');
-        if (!($(this).find('#id_phone_number').val())){
+        if ($(this).find('#id_phone_number').val().replace(/[^0-9]/g,"").length !=11){
             $(this).find('.number__span__error').show();
+            return false;
         }
         /*TODO: тут надо добавить валидацию телефона, а то он трётся*/
         if ($(this).find('#id_phone_number').val()){
@@ -28,22 +29,11 @@ $(document).ready(function(){
                   dataLayer.push({'event':'contactFormSent'})
                   swal("Спасибо!", "Заявка принята в обработку.", "success");
               });
+              closeConsultation(this);
               return false;
         }
         return false;
     });
-    $(".phone-validator").mask("+7 (999) 999 99 99");
-
-    $(".phone-validator").on("blur", function() {
-        var last = $(this).val().substr( $(this).val().indexOf("-") + 1 );
-
-        if( last.length == 3 ) {
-            var move = $(this).val().substr( $(this).val().indexOf("-") - 1, 1 );
-            var lastfour = move + last;
-            var first = $(this).val().substr( 0, 9 );
-
-            $(this).val( first + '-' + lastfour );
-        }
-    });
+    $(".phone-validator").inputmask("+7 (999) 999 99 99");
 });
 
