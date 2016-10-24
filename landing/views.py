@@ -18,6 +18,7 @@ class ProcessForm(AJAXMixin, CreateView):
 
     def form_valid(self, form):
         self.object = form.save()
+        self.object.send_mail_notification()
         return {'obj': self.object}
 
     def form_invalid(self, form):

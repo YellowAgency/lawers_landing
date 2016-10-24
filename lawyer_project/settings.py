@@ -117,9 +117,9 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.10/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'ru-ru'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Europe/Moscow'
 
 USE_I18N = True
 
@@ -144,6 +144,15 @@ STATICFILES_DIRS = [
 STATICFILES_STORAGE = 'whitenoise.django.GzipManifestStaticFilesStorage'
 
 APPEND_SLASH = True
+
+# email
+EMAIL_HOST = 'smtp.sendgrid.net'
+EMAIL_HOST_USER = env_var('SENDGRID_USERNAME')
+EMAIL_HOST_PASSWORD = env_var('SENDGRID_PASSWORD')
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_TO = env_var('EMAIL_TO')
+EMAIL_TO_CONTROL = env_var('EMAIL_TO_CONTROL')
 
 try:
     from lawyer_project.local_settings import *
